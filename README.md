@@ -1,4 +1,12 @@
-# Bora Rachão⚽ (Projeto Interdisciplinar)
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="app/resources/assets/images/logos/logo-bora-rachao-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="app/resources/assets/images/logos/logo-bora-rachao-black.png">
+    <img alt="Logo BoraRachão White" src="app/resources/assets/images/logos/logo-bora-rachao-white.png" width="550">
+  </picture>
+</div>
+
+# Bora Rachão (Projeto Interdisciplinar)
 
 ## Páginas 🖥️
 
