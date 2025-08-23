@@ -223,10 +223,24 @@ Quanto à viabilidade operacional, projeta-se que o sistema será funcional na p
 - [Inter - Google Fonts](https://fonts.google.com/specimen/Inter)
 
 ### Modelo de navegação:
-Em progresso...
 ```mermaid
+graph TD
+    Home --> About
+    Home --> Contact
+    Home --> PrivacyPolicy["Privacy Policy"]
+    Home --> Terms["Terms of use"]
+    Home --> Login
+    Login --> ForgotPassword["Forgot password"]
+    ForgotPassword --> ChangePassword["Change password"]
+    Login --> CreateMatch["Create match"]
+    Login --> Friends
+    Login --> UserProfile["User profile"]
+    UserProfile --> UserConfig["User config"]
+    Home --> AllSports["All sports"]
+    Home --> AllMatches["All matches"]
+    AllMatches --> MatchDetails["Match details"]
+    Home --> Register
 ```
-
 [Voltar para o início](#inicio)
 
 # 6. Protótipo
