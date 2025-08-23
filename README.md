@@ -191,19 +191,86 @@ O sistema deve ser elaborado de forma que usuários com diferentes necessidades 
 [Voltar para o início](#inicio)
 
 # 4. Estudo de viabilidade
+### Viabilidade técnica: 
+A viabilidade técnica do projeto é assegurada pela infraestrutura e pelos recursos tecnológicos disponibilizados pela Fatec de Jahu, os quais se mostram suficientes para a sua elaboração. As ferramentas escolhidas são compatíveis com os conteúdos abordados nas disciplinas do curso, como é o caso do Tailwind CSS, que contribui significativamente para a produtividade no desenvolvimento da interface. A equipe está em processo de adaptação às novas tecnologias, aprendendo por meio de estudos e da aplicação prática dos conhecimentos adquiridos nas aulas. 
+
+### Viabilidade financeira: 
+Em relação à viabilidade financeira, o projeto demonstra ser totalmente acessível, uma vez que, até o momento, não envolve a utilização de ferramentas ou plataformas que exijam investimentos financeiros. Os recursos empregados são gratuitos ou de código aberto, o que elimina custos adicionais. Além disso, o investimento de tempo e esforço dedicado ao projeto é compensado pelo aprendizado ao longo do processo. 
+
+### Viabilidade de mercado: 
+No que se refere à viabilidade de mercado, acredita-se que o projeto tem potencial para obter uma boa aceitação por parte dos usuários, considerando a carência de soluções similares no mercado. A proposta apresenta um diferencial inovador ao facilitar a organização de partidas esportivas e promover a conexão entre pessoas com interesses em comum, o que pode despertar o interesse de um público amplo e diversificado. 
+
+### Viabilidade operacional: 
+Quanto à viabilidade operacional, projeta-se que o sistema será funcional na prática, atendendo às necessidades reais de seus usuários. A expectativa é de que, ao ser finalizado com as tecnologias e os conhecimentos adequados, o sistema esteja apto a cumprir os objetivos propostos, oferecendo uma solução eficiente e acessível para os problemas identificados na fase inicial do projeto. 
+
 [Voltar para o início](#inicio)
 
 # 5. Design
+### Paleta de cores:
+
+| Nome                 | Hexadecimal | Tailwind CSS | Cor |
+|----------------------|:-----------:|:------------:|:---:|
+| Primária (azul)      | #06B6D4     | cyan-500     | [![](https://img.shields.io/badge/____-06B6D4?style=for-the-badge)](#) |
+| Secundária (laranja) | #F97316     | orange-500   | [![](https://img.shields.io/badge/____-F97316?style=for-the-badge)](#) |
+| Terciária (verde)    | #84CC16     | lime-500     | [![](https://img.shields.io/badge/____-84CC16?style=for-the-badge)](#) |
+| Cinza (neutra)       | #6B7280     | gray-500     | [![](https://img.shields.io/badge/____-6B7280?style=for-the-badge)](#) |
+| Vermelho (alerta)    | #DC2626     | red-600      | [![](https://img.shields.io/badge/____-DC2626?style=for-the-badge)](#) |
+| Amarelo (aviso)      | #F59E0B     | amber-500    | [![](https://img.shields.io/badge/____-F59E0B?style=for-the-badge)](#) |
+
+### Tipografia: 
+- [Inter - Google Fonts](https://fonts.google.com/specimen/Inter)
+
+### Modelo de navegação:
+Em progresso...
+```mermaid
+```
+
 [Voltar para o início](#inicio)
 
 # 6. Protótipo
+- Link dos protótipos com a ferramenta Figma: [Figma - BoraRachão](https://www.figma.com/design/1Vfxmgct3dibgEcS9vYykD/Prot%C3%B3tipos-Logo-Bora-Rach%C3%A3o-PI-2025_1?t=95Vlw8t9649WFMU2-0)
+
+### Figura 2 - Protótipo da página principal Home:
+![Figura 2 - Protótipo da página principal Home](.github/home-prototipo.png)
+
+### Figura 3 - Protótipo da tela de perfil do usuário:
+![Figura 3 - Protótipo da tela de perfil do usuário](.github/profile-prototipo.png)
+
 [Voltar para o início](#inicio)
 
 # 7. Aplicação
+- Link para o nosso repositório do GitHub: [Repositório - BoraRachão](https://github.com/eullerlourenco/bora-rachao/)
+  
+### Figura 4 - Página Home:
+![Figura 4 - Página Home](.github/home-aplicacao.png)
+
+### Figura 5 - Página Perfil do Usuário
+![Figura 5 - Página Perfil do Usuário](.github/profile-aplicacao.png)
+
 [Voltar para o início](#inicio)
 
 # 8. Considerações finais
+A aplicação destaca-se pela capacidade sua de personalização das partidas e perfil oferecidos aos usuários, porém causa o aumento do escopo e demanda de recursos humanos e materiais. 
+
+As limitações foram os requisitos que serão implementados futuramente como, sistema de avaliação para a partida, implementar chat na partida, sistema para criação de times dentro da partida, sistema de postagem de fotos da partida. 
+
+Houve desafios para criação da logo e ideias para implementar no PI. Mas em contrapartida foi sucesso! 
+
 [Voltar para o início](#inicio)
 
 # Referências bibliográficas
+ATLASSIAN. Trello. 2025. Disponível em: [https://trello.com/](https://trello.com/). Acesso em: 10 jun. 2025. 
+
+FIGMA, Inc. Figma: the collaborative interface design tool. 2025. Disponível em: [https://www.figma.com/](https://www.figma.com/). Acesso em: 10 jun. 2025.
+
+FONTICON, Inc. Font Awesome. 2025. Disponível em: [https://fontawesome.com/](https://fontawesome.com/). Acesso em: 10 jun. 2025. 
+
+MIND THE GRAPH. O que é um estudo de viabilidade em pesquisa? 2023. Disponível em: [https://mindthegraph.com/blog/pt/o-que-e-um-estudo-de-viabilidade-em-pesquisa/](https://mindthegraph.com/blog/pt/o-que-e-um-estudo-de-viabilidade-em-pesquisa/). Acesso em: 20 mai. 2025. 
+
+SEBRAE. Canvas Sebrae. 2025. Disponível em: [https://canvas-apps.pr.sebrae.com.br/canvas](https://canvas-apps.pr.sebrae.com.br/canvas). Acesso em: 22 abr. 2025. 
+
+TAILWIND LABS. Tailwind CSS: Rapidly build modern websites without ever leaving your HTML. 2025. Disponível em: [https://tailwindcss.com/](https://tailwindcss.com/). Acesso em: 10 jun. 2025. 
+
+W3SCHOOLS. W3Schools: tutorial de desenvolvimento web. 2025. Disponível em: [https://www.w3schools.com/](https://www.w3schools.com/). Acesso em: 10 jun. 2025. 
+
 [Voltar para o início](#inicio)
