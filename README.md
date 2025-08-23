@@ -138,7 +138,9 @@ O sistema deve ser elaborado de forma que usuários com diferentes necessidades 
 
 # 3. Regras de negócio
 ### Figura 1 - Canvas, modelo de negócios
-![Figura 1 - Canvas, modelo de negócios](.github/modelo-canvas.png)
+<div align="center">
+  <img alt="Figura 1 - Canvas, modelo de negócios" src=".github/modelo-canvas.png" width="550">
+</div>
 
 ## 3.1. O que será elaborado?
 ### Proposta de valor:
@@ -228,24 +230,32 @@ Em progresso...
 [Voltar para o início](#inicio)
 
 # 6. Protótipo
-- Link dos protótipos com a ferramenta Figma: [Figma - BoraRachão](https://www.figma.com/design/1Vfxmgct3dibgEcS9vYykD/Prot%C3%B3tipos-Logo-Bora-Rach%C3%A3o-PI-2025_1?t=95Vlw8t9649WFMU2-0)
+### - Link dos protótipos com a ferramenta Figma: [Figma - BoraRachão](https://www.figma.com/design/1Vfxmgct3dibgEcS9vYykD/Prot%C3%B3tipos-Logo-Bora-Rach%C3%A3o-PI-2025_1?t=95Vlw8t9649WFMU2-0)
 
 ### Figura 2 - Protótipo da página principal Home:
-![Figura 2 - Protótipo da página principal Home](.github/home-prototipo.png)
+<div align="center">
+  <img alt="Figura 2 - Protótipo da página principal Home" src=".github/home-prototipo.png" width="550">
+</div>
 
 ### Figura 3 - Protótipo da tela de perfil do usuário:
-![Figura 3 - Protótipo da tela de perfil do usuário](.github/profile-prototipo.png)
+<div align="center">
+  <img alt="Figura 3 - Protótipo da tela de perfil do usuário" src=".github/profile-prototipo.png" width="550">
+</div>
 
 [Voltar para o início](#inicio)
 
 # 7. Aplicação
-- Link para o nosso repositório do GitHub: [Repositório - BoraRachão](https://github.com/eullerlourenco/bora-rachao/)
+### - Link para o nosso repositório do GitHub: [Repositório - BoraRachão](https://github.com/eullerlourenco/bora-rachao/)
   
 ### Figura 4 - Página Home:
-![Figura 4 - Página Home](.github/home-aplicacao.png)
+<div align="center">
+  <img alt="Figura 4 - Página Home" src=".github/home-aplicacao.jpeg" width="550">
+</div>
 
 ### Figura 5 - Página Perfil do Usuário
-![Figura 5 - Página Perfil do Usuário](.github/profile-aplicacao.png)
+<div align="center">
+  <img alt="Figura 5 - Página Perfil do Usuário" src=".github/profile-aplicacao.jpeg" width="550">
+</div>
 
 [Voltar para o início](#inicio)
 
