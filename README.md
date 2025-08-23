@@ -122,13 +122,72 @@ Os usuários podem avaliar as partidas que ele participou depois que elas encerr
 </details>
 
 ## 2.2. Requisitos não funcionais
+<details><summary><h3>Clique para exibir</h3></summary>
+
+### RNF1 - O sistema deve proteger os dados
+Os dados do usuário devem ser protegidos e não serem compartilhados ou acessados além da equipe de desenvolvimento e o dono das informações (usuário). 
+### RNF2 - O sistema deve ter um bom desempenho
+O tempo de resposta do site deve ser de no máximo 5 segundos para cada transação e respostas, como, por exemplo, a ação de trocar de páginas e login efetuado com sucesso. 
+### RNF3 - O design deve ser intuitivo, e bonito
+A interface da aplicação deve ser agradável para quaisquer usuários que a utilizem, e de fácil entendimento. 
+### RNF4 - Acessibilidade 
+O sistema deve ser elaborado de forma que usuários com diferentes necessidades possam utilizar o software sem dificuldades.  
+</details>
+
 [Voltar para o início](#inicio)
 
 # 3. Regras de negócio
+### Figura 1 - Canvas, modelo de negócios
+![Figura 1 - Canvas, modelo de negócios](.github/modelo-canvas.png)
+
 ## 3.1. O que será elaborado?
+### Proposta de valor:
+  - Facilitar a organização de partidas esportivas;
+  - Promover a conexão entre pessoas com interesses em comum;
+  - Encontrar outros jogadores para praticar esportes e compartilhar experiências.
+
 ## 3.2. Como será elaborado?
+### Parcerias principais:
+  - Prefeitura da cidade;
+  - Quadras públicas e particulares;
+  - Faculdade de Tecnologia de Jahu (Fatec - Jahu);
+  - Eventos esportivos (por exemplo: corridas, jogos de futebol e campeonatos) para a divulgação.
+### Atividades principais:
+  - Criar partidas esportivas;
+  - Divulgar partidas esportivas;
+  - Participar de uma partida;
+  - Criar conexões e amizades.
+### Recursos principais:
+  - Internet de qualidade para fazer a aplicação;
+  - Computadores disponíveis para a programação e criação de arquivos, como a documentação;
+  - Plataforma de hospedagem;
+  - Servidor dedicado (banco de dados e aplicação).
+
 ## 3.3. Para quem será elaborado?
+### Segmento de mercado:
+  - Esportes;
+  - Saúde.
+### Relacionamento com o cliente: 
+  - Plataforma gratuita com possibilidade de assinatura;
+  - Pessoas de qualquer idade, gênero, localidade etc;
+  - Ambiente seguro, confiável e acolhedor.
+### Canais: 
+  - Aplicativo mobile;
+  - Aplicação web;
+  - Redes sociais para divulgação;
+  - Recomendação de usuários.
+
 ## 3.4. Quanto custará?
+### Estrutura de custos: 
+  - Domínio da aplicação;
+  - Desenvolvimento e manutenção;
+  - Custo de patente;
+  - Suporte ao cliente.
+### Fontes de renda: 
+  - Anúncios no site da aplicação;
+  - Planos de assinatura para uma melhor experiência e ter prioridade nos serviços;
+  - Doações opcionais caso o usuário queira ajudar o projeto.
+
 [Voltar para o início](#inicio)
 
 # 4. Estudo de viabilidade
