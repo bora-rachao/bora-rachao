@@ -1,98 +1,71 @@
-<div align="center">
+<div align="center" id="inicio">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="app/resources/assets/images/logos/logo-bora-rachao-white.png">
     <source media="(prefers-color-scheme: light)" srcset="app/resources/assets/images/logos/logo-bora-rachao-black.png">
     <img alt="Logo BoraRachão White" src="app/resources/assets/images/logos/logo-bora-rachao-white.png" width="550">
   </picture>
+  
+  # Plataforma para organização de partidas esportivas
+  ### Centro Paula Souza
+  ### Faculdade de Tecnologia de Jahu 
+  ### Curso de Tecnologia em Desenvolvimento de Software Multiplataforma
+  ### Jaú, SP, BR
+  ### Início: 1º Semestre / 2025
+  # Documento da aplicação web
 </div>
 
-# Bora Rachão (Projeto Interdisciplinar)
+<details><summary><h1>Sumário</h1></summary>
 
-## Páginas 🖥️
+  - [1. Resumo da aplicação web](#1-resumo-da-aplicação-web)
+    - [1.1. Objetivos](#11-objetivos)
+    - [1.2 Métodos da pesquisa](#12-métodos-da-pesquisa)
+  - [2. Documento de requisitos](#2-documento-de-requisitos)
+    - [2.1. Requisitos funcionais](#21-requisitos-funcionais)
+    - [2.2. Requisitos não funcionais](#22-requisitos-não-funcionais)
+  - [3. Regras de negócio](#3-regras-de-negócio)
+    - [3.1. O que será elaborado?](#31-o-que-será-elaborado)
+    - [3.2. Como será elaborado?](#32-como-será-elaborado)
+    - [3.3. Para quem será elaborado?](#33-para-quem-será-elaborado)
+    - [3.4. Quanto custará?](#34-quanto-custará)
+  - [4. Estudo de viabilidade](#4-estudo-de-viabilidade)
+  - [5. Design](#5-design)
+  - [6. Protótipo](#6-protótipo)
+  - [7. Aplicação](#7-aplicação)
+  - [8. Considerações finais](#8-considerações-finais)
+  - [Referências bibliográficas](#referências-bibliográficas)
+</details>
 
-### Paginas (To do)
+# 1. Resumo da aplicação web
+## 1.1. Objetivos
+## 1.2. Métodos da pesquisa
+[Voltar para o início](#inicio)
 
-- Privacy Policy (políticas de privacidade)
-- Terms of Use (termos de uso)
-- Match (detalhes da partida)
-- Create Match (Formulário para criar uma partida)
-- User Config (Atualizar e mudar as informações do usuário)
-- Friends (Ver todos amigos)
+# 2. Documento de requisitos
+## 2.1. Requisitos funcionais
+## 2.2. Requisitos não funcionais
+[Voltar para o início](#inicio)
 
-### Paginas (Done)
-- Home (página inicial para deslogados)
-- Login
-- Register
-- User Profile (Perfil dos usuários)
-- Contact (página com formulário de contato e sugestões)
-- About (sobre os desenvolvedores)
-- All Matches (Lista todas as partidas disponíveis)
-- All Sports (Lista todos os esportes disponíveis)
-- Forgot Password (Pagina para solicitar redefinição de senha)
-- Recover Password (Página para inserir nova senha da redefinição)
+# 3. Regras de negócio
+## 3.1. O que será elaborado?
+## 3.2. Como será elaborado?
+## 3.3. Para quem será elaborado?
+## 3.4. Quanto custará?
+[Voltar para o início](#inicio)
 
-## Precisamos 📌
+# 4. Estudo de viabilidade
+[Voltar para o início](#inicio)
 
-- Montar layout das paginas no Figma
-- Desenvolver logotipo
-- Definir as cores principais de uso
-- Construir o manual/guia da marca
-- Modularizar exemplo dos componentes a ser usados
-- Definir fontes (tipografia)
+# 5. Design
+[Voltar para o início](#inicio)
 
-## Definido 🤝
+# 6. Protótipo
+[Voltar para o início](#inicio)
 
-### Tecnologias
+# 7. Aplicação
+[Voltar para o início](#inicio)
 
-> Front-end
-- HTML
-- CSS
-- JavaScript
-- Tailwind CSS
-- Figma
-- FontAwesome (icones)
+# 8. Considerações finais
+[Voltar para o início](#inicio)
 
-> Back-end
-
-- Sem definições
-
-### Design
-
-> Cores
-
-- Primaria (azul): #06B6D4 (hexadecimal); cyan-500 (Tailwind CSS); 
-- Secundária (laranja): #F97316 (hexadecimal); orange-500 (Tailwind CSS);
-- Verde: #84CC16 (hexadecimal); lime-500 (Tailwind CSS);
-- Vermelho: #E7000B (hexadecimal); red-600 (Tailwind CSS);
-- Cinza: #6A7282 (hexadecimal); gray-500 (Tailwind CSS);
-- Amarelo: #FD9A00 (hexadecimal); amber-500 (Tailwind CSS);
-
-> Fonte
-- [Inter - Google Fonts](https://fonts.google.com/specimen/Inter?query=inter)
-
-### Funções/Tarefas
-
-> Euller
-- Home ✅
-- User Profile ✅
-- All Matches ✅
-
-> Lucas
-- Match Details ✅
-- Create Match ✅
-- Friends ✅
-
-> João
-- Login ✅
-- Register ✅
-- Contact ✅
-
-> Gabriel
-- About ✅
-- Recover Password ✅
-- All Sports ✅
-
-> Beatriz
-- Privacy Policy ✅
-- Terms of Use ✅
-- User Config ✅
+# Referências bibliográficas
+[Voltar para o início](#inicio)
