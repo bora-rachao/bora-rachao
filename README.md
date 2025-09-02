@@ -89,27 +89,27 @@ O sistema deve exibir uma página com um formulário de contato para os usuário
 <details><summary><h3>Requisitos que serão trabalhados</h3></summary>
 
 ### RF6 - Cadastrar usuário
-O sistema deve permitir o cadastro de usuários com os seguintes atributos: foto de perfil obrigatória com reconhecimento facial para verificar se a foto é de uma pessoa real (sem ser desenhos animados ou famosos), nome e sobrenome, nome de usuário, e-mail, senha, telefone.
+O sistema deve permitir o cadastro de usuários com os seguintes atributos: Nome completo, e-mail, senha, cidade, gênero, cpf e data de nascimento.
 ### RF7 - Confirmar e-mail
 O usuário deve confirmar o e-mail informado com o código enviado no e-mail dele. 
-### RF8 - Confirmar telefone
-O sistema deve apresentar ao usuário uma tela para fazer o login com e-mail, ou nome de usuário, e senha.
+### RF8 - Inserir foto própria de perfil
+O sistema exigir do usuário uma foto própria para ingressar em uma partida.
 ### RF9 - Realizar login
-O sistema deve apresentar ao usuário uma tela para fazer o login com e-mail, ou nome de usuário, e senha.
+O sistema deve apresentar ao usuário uma tela para fazer o login com e-mail e senha.
 ### RF10 - Inserir informações adicionais
-O usuário, após fazer login, pode inserir informações adicionais no perfil para participar de uma partida, como: endereço, CPF, idade e gênero e biografia. 
+O usuário, após fazer cadastro, pode inserir informações adicionais no perfil para participar de uma partida, como: biografia. 
 ### RF11 - Editar informações do usuário 
-O usuário pode editar as informações do seu perfil, como: nome de usuário, endereço de e-mail, senha, telefone, endereço, foto de perfil e biografia. 
+O usuário pode editar as informações do seu perfil, como: nome de usuário, endereço de e-mail, senha, cidade, foto de perfil e biografia. 
 ### RF12 - Listar partidas disponíveis
 O sistema deve listar as partidas disponíveis que os usuários criaram, que estão disponíveis na região do usuário. 
 ### RF13 - Criar partidas
-O sistema deve ter um formulário para o usuário criar sua própria partida, atributos: esporte, nome da partida, data e hora, localização, número de participantes. Atributos opcionais: idade mínima, gênero, descrição, convidar amigos, nível técnico. 
+O sistema deve ter um formulário para o usuário criar sua própria partida, atributos: esporte, nome da partida, data e hora, localização, número de participantes e idade mínima. Atributos opcionais: gênero, descrição e convidar amigos. 
 ### RF14 - Convidar amigos para a partidas
 O usuário pode chamar os amigos para participar da partida depois que ela foi criada, através dos amigos adicionados no site, ou por uma mensagem em algum canal de comunicação (mandar no privado de alguém, ou compartilhar nas redes sociais).
 ### RF16 - Editar as partidas pendentes
-O sistema permite o criador editar a partida que ainda não foi realizada, editar número de participantes e a descrição do evento. 
+O sistema permite o criador editar a partida que ainda não foi realizada, editar número de participantes e a descrição do evento, com um limite de tempo para essa ação. 
 ### RF17 - Cancelar partidas
-- Criador: O criador da partida pode cancelar a partida que ele criou, com um limite de tempo para essa ação. 
+- Criador: O criador da partida pode cancelar a partida que ele criou. 
 - Usuário: Os usuários podem cancelar sua participação nas partidas que ele se inscreveu. 
 ### RF18 - Mandar pedidos de amizades
 Os usuários podem enviar pedidos de amizade para outros usuários.
