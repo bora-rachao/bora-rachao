@@ -11,20 +11,20 @@
   ### Curso de Tecnologia em Desenvolvimento de Software Multiplataforma
   ### Jaú, SP, BR
   ### Início: 1º Semestre / 2025
-  # Documento da aplicação web
+  # Documento da Aplicação Web
 </div>
 
-# Autores:
-<h3 align="center">
+## Autores:
+<h4 align="center">
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" align="center" width="35"></a> &nbsp;
   <a href="https://www.linkedin.com/in/beatriz-karoline-monteiro-808b86352/">Beatriz Monteiro</a>;
   <a href="https://www.linkedin.com/in/eullerlourenco/">Euller Lourenço</a>;
   <a href="https://www.linkedin.com/in/gabriel-alexandre-ribeiro-97950026a/">Gabriel Alexandre</a>;
   <a href="https://www.linkedin.com/in/jo%C3%A3o-francisco-fabbri-fonseca/">João Francisco</a>;
   <a href="https://www.linkedin.com/in/lucas-bardeli/">Lucas Bardeli</a>.
-</h3>
+</h4>
 
-<details><summary><h1>Sumário</h1></summary>
+<details><summary><h2>Sumário</h2></summary>
 
   - [1. Resumo da aplicação web](#1-resumo-da-aplicação-web)
     - [1.1. Objetivos](#11-objetivos)
@@ -45,7 +45,7 @@
   - [Referências bibliográficas](#referências-bibliográficas)
 </details>
 
-# 1. Resumo da aplicação web
+# 1. Resumo da Aplicação Web
 Atualmente, muitas pessoas enfrentam dificuldades para organizar partidas esportivas por meio das redes sociais. É comum a criação de grupos no WhatsApp ou Facebook para marcar jogos, como de vôlei, por exemplo, mas a falta de comunicação eficaz muitas vezes impede que essas partidas realmente aconteçam.
 
 Outro obstáculo é a limitação de acesso a dispositivos como celulares ou notebooks. Pensando nisso, nosso site foi desenvolvido para ser acessível a partir de qualquer dispositivo com acesso à internet, facilitando a participação dos usuários.
@@ -57,7 +57,7 @@ Este projeto interdisciplinar (P.I.) visa desenvolver uma Plataforma Web, cujo o
 
 De forma simples e intuitiva, o usuário pode acessar o site, visualizar as partidas disponíveis e se inscrever naquelas que despertarem seu interesse. Assim, incentivamos a prática esportiva, a socialização e a formação de novas amizades por meio do esporte. 
 
-## 1.2. Métodos da pesquisa
+## 1.2. Métodos da Pesquisa
 A pesquisa e o desenvolvimento do projeto estão sendo realizados com o apoio da infraestrutura disponibilizada pela Fatec de Jahu. As atividades ocorrem tanto durante as aulas quanto nos períodos livres, utilizando os computadores dos laboratórios da instituição, bem como os computadores pessoais dos integrantes da equipe. 
 
 As tecnologias utilizadas até o momento incluem HTML, CSS, JavaScript e Tailwind CSS para a construção da interface e estrutura da aplicação. O protótipo visual está sendo desenvolvido por meio da ferramenta Figma, que permite a criação colaborativa de interfaces. Além disso, está sendo utilizada a biblioteca Font Awesome para a inserção de ícones que enriquecem a experiência do usuário. Para o desenvolvimento do back-end, será empregado PHP em conjunto com MySQL e XAMPP. O código é desenvolvido no VS Code e versionado com Git, garantindo organização e controle das alterações.
@@ -68,8 +68,8 @@ As tecnologias utilizadas até o momento incluem HTML, CSS, JavaScript e Tailwin
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" align="center" width="35"></a> &nbsp;&nbsp;
-  <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" align="center" width="35"></a> &nbsp;&nbsp;
+  <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Visual Studio Code" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" align="center" width="35"></a>
 </h3>
@@ -78,10 +78,10 @@ Todo o trabalho está sendo conduzido nas dependências da Fatec de Jahu, local 
 
 [Voltar para o início](#inicio)
 
-# 2. Documento de requisitos
+# 2. Documento de Requisitos
 Um documento de requisitos de sistema é um arquivo que descreve o que o sistema deve fazer e como ele deve funcionar. Ele serve para orientar a equipe de desenvolvimento e garantir que todos entendam as necessidades do projeto. Nele estão incluídas as funções principais do sistema, regras importantes e características como segurança e facilidade de uso.
 
-## 2.1. Requisitos funcionais
+## 2.1. Requisitos Funcionais
 <details><summary><h3>Requisitos que foram implementados</h3></summary>
 
 ### RF1 - Exibir informações sobre a equipe do P.I
@@ -131,7 +131,7 @@ Listar perfil dos usuários
 Os usuários podem avaliar as partidas que ele participou depois que elas encerraram.
 </details>
 
-## 2.2. Requisitos não funcionais
+## 2.2. Requisitos Não Funcionais
 <details><summary><h3>Clique para exibir</h3></summary>
 
 ### RNF1 - O sistema deve proteger os dados
@@ -147,39 +147,39 @@ O sistema deve ser elaborado de forma que usuários com diferentes necessidades 
 [Voltar para o início](#inicio)
 
 # 3. Regras de negócio
-### Figura 1 - Canvas, modelo de negócios:
+### Figura 1 - Modelo de Negócios Canvas:
 <div align="center">
   <img alt="Figura 1 - Canvas, modelo de negócios" src=".github/modelo-canvas.png" width="550">
 </div>
 
 ## 3.1. O que será elaborado?
-### Proposta de valor:
+### Proposta de Valor:
   - Facilitar a organização de partidas esportivas;
   - Promover a conexão entre pessoas com interesses em comum;
   - Encontrar outros jogadores para praticar esportes e compartilhar experiências.
 
 ## 3.2. Como será elaborado?
-### Parcerias principais:
+### Parceiros Chave:
   - Prefeitura da cidade;
   - Quadras públicas e particulares;
   - Faculdade de Tecnologia de Jahu (Fatec - Jahu);
   - Eventos esportivos (por exemplo: corridas, jogos de futebol e campeonatos) para a divulgação.
-### Atividades principais:
+### Atividades Chave:
   - Criar partidas esportivas;
   - Divulgar partidas esportivas;
   - Participar de uma partida;
   - Criar conexões e amizades.
-### Recursos principais:
+### Recursos Chave:
   - Internet de qualidade para fazer a aplicação;
   - Computadores disponíveis para a programação e criação de arquivos, como a documentação;
   - Plataforma de hospedagem;
   - Servidor dedicado (banco de dados e aplicação).
 
 ## 3.3. Para quem será elaborado?
-### Segmento de mercado:
+### Segmentos de mercado:
   - Esportes;
   - Saúde.
-### Relacionamento com o cliente: 
+### Relacionamento com o Cliente: 
   - Plataforma gratuita com possibilidade de assinatura;
   - Pessoas de qualquer idade, gênero, localidade etc;
   - Ambiente seguro, confiável e acolhedor.
@@ -190,35 +190,35 @@ O sistema deve ser elaborado de forma que usuários com diferentes necessidades 
   - Recomendação de usuários.
 
 ## 3.4. Quanto custará?
-### Estrutura de custos: 
+### Estrutura de Custos: 
   - Domínio da aplicação;
   - Desenvolvimento e manutenção;
   - Custo de patente;
   - Suporte ao cliente.
-### Fontes de renda: 
+### Fontes de Renda: 
   - Anúncios no site da aplicação;
   - Planos de assinatura para uma melhor experiência e ter prioridade nos serviços;
   - Doações opcionais caso o usuário queira ajudar o projeto.
 
 [Voltar para o início](#inicio)
 
-# 4. Estudo de viabilidade
-### Viabilidade técnica: 
+# 4. Estudo de Viabilidade
+### Viabilidade Técnica: 
 A viabilidade técnica do projeto é assegurada pela infraestrutura e pelos recursos tecnológicos disponibilizados pela Fatec de Jahu, os quais se mostram suficientes para a sua elaboração. As ferramentas escolhidas são compatíveis com os conteúdos abordados nas disciplinas do curso, como é o caso do Tailwind CSS, que contribui significativamente para a produtividade no desenvolvimento da interface. A equipe está em processo de adaptação às novas tecnologias, aprendendo por meio de estudos e da aplicação prática dos conhecimentos adquiridos nas aulas. 
 
-### Viabilidade financeira: 
+### Viabilidade Financeira: 
 Em relação à viabilidade financeira, o projeto demonstra ser totalmente acessível, uma vez que, até o momento, não envolve a utilização de ferramentas ou plataformas que exijam investimentos financeiros. Os recursos empregados são gratuitos ou de código aberto, o que elimina custos adicionais. Além disso, o investimento de tempo e esforço dedicado ao projeto é compensado pelo aprendizado ao longo do processo. 
 
-### Viabilidade de mercado: 
+### Viabilidade de Mercado: 
 No que se refere à viabilidade de mercado, acredita-se que o projeto tem potencial para obter uma boa aceitação por parte dos usuários, considerando a carência de soluções similares no mercado. A proposta apresenta um diferencial inovador ao facilitar a organização de partidas esportivas e promover a conexão entre pessoas com interesses em comum, o que pode despertar o interesse de um público amplo e diversificado. 
 
-### Viabilidade operacional: 
+### Viabilidade Operacional: 
 Quanto à viabilidade operacional, projeta-se que o sistema será funcional na prática, atendendo às necessidades reais de seus usuários. A expectativa é de que, ao ser finalizado com as tecnologias e os conhecimentos adequados, o sistema esteja apto a cumprir os objetivos propostos, oferecendo uma solução eficiente e acessível para os problemas identificados na fase inicial do projeto. 
 
 [Voltar para o início](#inicio)
 
 # 5. Design
-### Paleta de cores:
+### Paleta de Cores:
 
 | Nome                 | Hexadecimal | Tailwind CSS | Cor |
 |----------------------|:-----------:|:------------:|:---:|
@@ -232,7 +232,7 @@ Quanto à viabilidade operacional, projeta-se que o sistema será funcional na p
 ### Tipografia: 
 - [Inter - Google Fonts](https://fonts.google.com/specimen/Inter)
 
-### Modelo de navegação:
+### Modelo de Navegação:
 ```mermaid
 graph TD
     Home --> About
@@ -283,7 +283,7 @@ graph TD
 
 [Voltar para o início](#inicio)
 
-# 8. Considerações finais
+# 8. Considerações Finais
 A aplicação destaca-se pela capacidade sua de personalização das partidas e perfil oferecidos aos usuários, porém causa o aumento do escopo e demanda de recursos humanos e materiais. 
 
 As limitações foram os requisitos que serão implementados futuramente como, sistema de avaliação para a partida, implementar chat na partida, sistema para criação de times dentro da partida, sistema de postagem de fotos da partida. 
@@ -292,7 +292,7 @@ Houve desafios para criação da logo e ideias para implementar no PI. Mas em co
 
 [Voltar para o início](#inicio)
 
-# Referências bibliográficas
+# Referências Bibliográficas
 ATLASSIAN. Trello. 2025. Disponível em: [https://trello.com/](https://trello.com/). Acesso em: 10 jun. 2025. 
 
 FIGMA, Inc. Figma: the collaborative interface design tool. 2025. Disponível em: [https://www.figma.com/](https://www.figma.com/). Acesso em: 10 jun. 2025.
