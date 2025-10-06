@@ -14,17 +14,17 @@
   # Documento da Aplicação Web
 </div>
 
-## Autores:
-<h4 align="center">
+# Autores:
+<h3 align="center">
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" align="center" width="35"></a> &nbsp;
   <a href="https://www.linkedin.com/in/beatriz-karoline-monteiro-808b86352/">Beatriz Monteiro</a>;
   <a href="https://www.linkedin.com/in/eullerlourenco/">Euller Lourenço</a>;
   <a href="https://www.linkedin.com/in/gabriel-alexandre-ribeiro-97950026a/">Gabriel Alexandre</a>;
   <a href="https://www.linkedin.com/in/jo%C3%A3o-francisco-fabbri-fonseca/">João Francisco</a>;
   <a href="https://www.linkedin.com/in/lucas-bardeli/">Lucas Bardeli</a>.
-</h4>
+</h3>
 
-<details><summary><h2>Sumário</h2></summary>
+<details><summary><h1>Sumário</h1></summary>
 
   - [1. Resumo da aplicação web](#1-resumo-da-aplicação-web)
     - [1.1. Objetivos](#11-objetivos)
