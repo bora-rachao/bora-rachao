@@ -41,7 +41,11 @@
   - [5. Design](#5-design)
   - [6. Protótipo](#6-protótipo)
   - [7. Aplicação](#7-aplicação)
-  - [8. Considerações finais](#8-considerações-finais)
+  - [8. Diagramas da aplicação](#8-diagramas-da-aplicação)
+    - [8.1 Diagrama de Casos de Uso](#81-diagrama-de-casos-de-uso)
+    - [8.2 Diagrama de Classes](#82-diagrama-de-classes)
+    - [8.3 Diagrama de Banco de Dados](#83-diagrama-de-banco-de-dados)
+  - [9. Considerações finais](#9-considerações-finais)
   - [Referências bibliográficas](#referências-bibliográficas)
 </details>
 
@@ -114,21 +118,19 @@ O usuário pode editar as informações do seu perfil, como: nome de usuário, e
 O sistema deve listar as partidas disponíveis que os usuários criaram, que estão disponíveis na região do usuário. 
 ### RF13 - Criar partidas
 O sistema deve ter um formulário para o usuário criar sua própria partida, atributos: esporte, nome da partida, data e hora, localização, número de participantes e idade mínima. Atributos opcionais: gênero, descrição e convidar amigos. 
-### RF14 - Convidar amigos para a partidas
-O usuário pode chamar os amigos para participar da partida depois que ela foi criada, através dos amigos adicionados no site, ou por uma mensagem em algum canal de comunicação (mandar no privado de alguém, ou compartilhar nas redes sociais).
-### RF16 - Editar as partidas pendentes
+### RF14 - Editar as partidas pendentes
 O sistema permite o criador editar a partida que ainda não foi realizada, editar número de participantes e a descrição do evento, com um limite de tempo para essa ação. 
-### RF17 - Cancelar partidas
+### RF15 - Cancelar partidas
 - Criador: O criador da partida pode cancelar a partida que ele criou. 
 - Usuário: Os usuários podem cancelar sua participação nas partidas que ele se inscreveu. 
-### RF18 - Mandar pedidos de amizades
-Os usuários podem enviar pedidos de amizade para outros usuários.
-### RF19 - Receber pedidos de amizade
-O usuário pode receber pedidos de amizades de outro usuário. 
-### RF20 - Receber pedidos de amizade
-Listar perfil dos usuários
-### RF21 - Avaliar partidas finalizadas
+### RF16 - Avaliar partidas finalizadas
 Os usuários podem avaliar as partidas que ele participou depois que elas encerraram.
+### RF17 - Mandar pedidos de amizade
+Os usuários podem enviar pedidos de amizade para outros usuários.
+### RF18 - Receber pedidos de amizade
+O usuário pode receber pedidos de amizades de outro usuário. 
+### RF19 - Convidar amigos para as partidas
+O usuário pode chamar os amigos para participar da partida depois que ela foi criada, através dos amigos adicionados no site, ou por uma mensagem em algum canal de comunicação (mandar no privado de alguém, ou compartilhar nas redes sociais).
 </details>
 
 ## 2.2. Requisitos Não Funcionais
@@ -283,7 +285,12 @@ graph TD
 
 [Voltar para o início](#inicio)
 
-# 8. Considerações Finais
+# 8. Diagramas da aplicação
+## 8.1 Diagrama de Casos de Uso
+## 8.2 Diagrama de Classes
+## 8.3 Diagrama de Banco de Dados
+
+# 9. Considerações Finais
 A aplicação destaca-se pela capacidade sua de personalização das partidas e perfil oferecidos aos usuários, porém causa o aumento do escopo e demanda de recursos humanos e materiais. 
 
 As limitações foram os requisitos que serão implementados futuramente como, sistema de avaliação para a partida, implementar chat na partida, sistema para criação de times dentro da partida, sistema de postagem de fotos da partida. 
