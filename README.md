@@ -286,9 +286,26 @@ graph TD
 [Voltar para o início](#inicio)
 
 # 8. Diagramas da aplicação
+Os diagramas da aplicação representam de forma visual a estrutura e o funcionamento do sistema, auxiliando na compreensão e no planejamento do projeto. Por meio da notação UML, é possível visualizar as principais interações, classes e entidades do banco de dados, facilitando o entendimento entre todos os envolvidos no desenvolvimento.
+
 ## 8.1 Diagrama de Casos de Uso
+Mostra como os usuários interagem com o sistema e quais são as principais funcionalidades disponíveis. Ajuda a identificar os papéis dos atores e os fluxos de uso da aplicação.
+- ### Figura 6:
+<div align="center">
+  <img alt="Figura 6 - Diagrama de Casos de Uso" src=".github/diagrama-casos-uso.png" width="550">
+</div>
+
 ## 8.2 Diagrama de Classes
+Apresenta a estrutura interna do sistema, mostrando as classes, seus atributos, métodos e relacionamentos. Permite compreender a organização do código e a relação entre os componentes.
+- ### Figura 7:
+<div align="center">
+  <img alt="Figura 7 - Diagrama de Classes" src=".github/diagrama-classes.png" width="550">
+</div>
+
 ## 8.3 Diagrama de Banco de Dados
+Representa as tabelas e os relacionamentos que compõem a base de dados do sistema. Serve para planejar e documentar a forma como as informações serão armazenadas e conectadas.
+
+[Voltar para o início](#inicio)
 
 # 9. Considerações Finais
 A aplicação destaca-se pela capacidade sua de personalização das partidas e perfil oferecidos aos usuários, porém causa o aumento do escopo e demanda de recursos humanos e materiais. 
