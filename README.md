@@ -297,10 +297,72 @@ Mostra como os usuários interagem com o sistema e quais são as principais func
 
 ## 8.2 Diagrama de Classes
 Apresenta a estrutura interna do sistema, mostrando as classes, seus atributos, métodos e relacionamentos. Permite compreender a organização do código e a relação entre os componentes.
-- ### Figura 7:
-<div align="center">
-  <img alt="Figura 7 - Diagrama de Classes" src=".github/diagrama-classes.png" width="550">
-</div>
+
+```mermaid
+classDiagram
+direction LR
+    class Usuario {
+        - id_usuario: ?int
+        - partidas: ?Partida[]
+        - nome: string
+        - email: string
+        - senha: string
+        - cpf: string
+        - data_aniversario: string
+        - cidade: string
+        - genero: string
+        - ativo: boolean
+        - criado_em: ?string
+        - alterado_em: ?string
+        - deletado_em: ?string
+        + inserir() int
+        + login(string email, string senha) void
+        + logout() void
+        + atualizar() ?int
+        + esqueci_senha(string nova_senha) ?string
+        + excluir() ?int
+        + ativar() ?int
+        + desativar() ?int
+    }
+    class PartidaUsuario {
+        - usuario: Usuario
+        - partida: Partida
+        - funcao: string
+        - status: string
+        - criado_em: ?string
+        - alterado_em: ?string
+        - deletado_em: ?string
+        + vincular() ?boolean
+        + desvincular() ?boolean
+    }
+    class Partida {
+    }
+    class Esporte {
+        - id_esporte: ?int
+        - nome: string
+        - descricao: ?string
+        - ativo: boolean
+        - categoria: string
+        + atualizar() int
+        + ativar() ?int
+        + desativar() ?int
+    }
+    class PartidaEndereco {
+        - id_esporte: ?int
+        - nome: string
+        - descricao: ?string
+        - ativo: boolean
+        + atualizar() int
+        + ativar() ?int
+        + desativar() ?int
+    }
+    Usuario -->  Partida
+    Usuario --> PartidaUsuario
+    Partida --> PartidaUsuario
+    Partida --> Esporte
+    Partida --> PartidaEndereco
+    Esporte --> CategoriaEsporte
+```
 
 ## 8.3 Diagrama de Banco de Dados
 Representa as tabelas e os relacionamentos que compõem a base de dados do sistema. Serve para planejar e documentar a forma como as informações serão armazenadas e conectadas.
