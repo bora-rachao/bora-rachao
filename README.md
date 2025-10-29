@@ -302,66 +302,87 @@ Apresenta a estrutura interna do sistema, mostrando as classes, seus atributos, 
 classDiagram
 direction LR
     class Usuario {
-        - id_usuario: ?int
-        - partidas: ?Partida[]
-        - nome: string
-        - email: string
-        - senha: string
-        - cpf: string
-        - data_aniversario: string
-        - cidade: string
-        - genero: string
-        - ativo: boolean
-        - criado_em: ?string
-        - alterado_em: ?string
-        - deletado_em: ?string
-        + inserir() int
-        + login(string email, string senha) void
-        + logout() void
-        + atualizar() ?int
-        + esqueci_senha(string nova_senha) ?string
-        + excluir() ?int
-        + ativar() ?int
-        + desativar() ?int
+	    - id_usuario: ?int
+	    - partidas: ?Partida[]
+	    - nome: string
+	    - email: string
+	    - senha: string
+	    - cpf: string
+	    - data_aniversario: string
+	    - cidade: string
+	    - genero: string
+	    - ativo: boolean
+	    - criado_em: ?string
+	    - alterado_em: ?string
+	    - deletado_em: ?string
+	    + inserir() int
+	    + login(string email, string senha) void
+	    + logout() void
+	    + atualizar() ?int
+	    + esqueci_senha(string nova_senha) ?string
+	    + excluir() ?int
+	    + ativar() ?int
+	    + desativar() ?int
     }
     class PartidaUsuario {
-        - usuario: Usuario
-        - partida: Partida
-        - funcao: string
-        - status: string
-        - criado_em: ?string
-        - alterado_em: ?string
-        - deletado_em: ?string
-        + vincular() ?boolean
-        + desvincular() ?boolean
+	    - usuario: Usuario
+	    - partida: Partida
+	    - funcao: string
+	    - status: string
+	    - criado_em: ?string
+	    - alterado_em: ?string
+	    - deletado_em: ?string
+	    + vincular() ?boolean
+	    + desvincular() ?boolean
     }
     class Partida {
+	    - id_partida: ?int
+	    - esporte: Esporte
+	    - endereco: PartidaEndereco
+	    - admin: Usuario
+	    - jogadores: ?Usuario[]
+	    - nome: string
+	    - hora: string
+	    - data: string
+	    - numero_participantes: int
+	    - idade_minima: int
+	    - visibilidade: string
+	    - descricao: ?string
+	    - status: string
+	    - criado_em: ?string
+	    - atualizado_em: ?string
+	    - deletado_em: ?string
+	    + inserir() : int
+	    + atualizar() : ?int
+	    + deletar() : ?int
     }
     class Esporte {
-        - id_esporte: ?int
-        - nome: string
-        - descricao: ?string
-        - ativo: boolean
-        - categoria: string
-        + atualizar() int
-        + ativar() ?int
-        + desativar() ?int
+	    - id_esporte: ?int
+	    - nome: string
+	    - descricao: ?string
+	    - ativo: boolean
+	    - categoria: string
+	    + atualizar() int
+	    + ativar() ?int
+	    + desativar() ?int
     }
     class PartidaEndereco {
-        - id_esporte: ?int
-        - nome: string
-        - descricao: ?string
-        - ativo: boolean
-        + atualizar() int
-        + ativar() ?int
-        + desativar() ?int
+	    - id_partida_endereco: ?string
+	    - partida: Partida
+	    - cep: string
+	    - rua: string
+	    - bairro: string
+	    - numero: string
+	    - cidade: string
+	    + inserir() : int
+	    + atualizar() : ?int
+	    + deletar() : ?int
     }
-    Usuario -->  Partida
-    Usuario --> PartidaUsuario
-    Partida --> PartidaUsuario
-    Partida --> Esporte
-    Partida --> PartidaEndereco
-    Esporte --> CategoriaEsporte
+    Usuario "1" *--> "n" Partida
+    Usuario *--> PartidaUsuario
+    PartidaUsuario <--* Partida
+    Partida "n" <--* "1" Esporte
+    Partida *--> PartidaEndereco
 ```
 
 ## 8.3 Diagrama de Banco de Dados
