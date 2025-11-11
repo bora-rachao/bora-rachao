@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS bora_rachao CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE bora_rachao;
+CREATE DATABASE IF NOT EXISTS bora_rachao2 CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE bora_rachao2;
 CREATE TABLE IF NOT EXISTS users (
 	id_user BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
@@ -73,5 +73,5 @@ CREATE TABLE IF NOT EXISTS friends (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users (id_user),
-    FOREIGN KEY (friend_id) REFERENCES users (id_user),
+    FOREIGN KEY (friend_id) REFERENCES users (id_user)
 );

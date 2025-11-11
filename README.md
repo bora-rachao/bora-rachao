@@ -387,6 +387,10 @@ direction LR
 
 ## 8.3 Diagrama de Banco de Dados
 Representa as tabelas e os relacionamentos que compõem a base de dados do sistema. Serve para planejar e documentar a forma como as informações serão armazenadas e conectadas.
+- ### Figura 7:
+<div align="center">
+  <img alt="Figura 7 - Diagrama de Banco de Dados" src=".github/diagrama-banco-dados.png" width="550">
+</div>
 
 [Voltar para o início](#inicio)
 
