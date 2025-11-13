@@ -13,6 +13,8 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, SoftDeletes;
 
+    protected $primaryKey = 'id_user';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -22,6 +24,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'document',
+        'date_of_birth',
+        'city',
+        'gender',
+        'avatar',
+        'bio',
+        'friends_count',
     ];
 
     /**
