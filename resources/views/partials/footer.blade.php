@@ -1,15 +1,15 @@
 <footer class="py-18 bg-white shadow border-t border-gray-200">
     <div class="container mx-auto px-4">
       <div class="flex flex-col justify-center items-center gap-y-2">
-        <a href="/app/Views/index.html">
+        <a href="{{ route('home') }}">
           <img
-            src="/resources/assets/images/logos/logo-black-colors.png"
+            src="{{ asset('assets/images/logos/logo-black-colors.png') }}"
             alt="Logo BoraRachão"
             class="w-28 h-28 object-cover"
           />
         </a>
         <a
-          href="/app/Views/index.html"
+          href="{{ route('home') }}"
           class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
         >
           BoraRachão &copy;
@@ -19,7 +19,7 @@
         class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
       >
         <a
-          href="/app/Views/index.html"
+          href="{{ route('home') }}"
           class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
         >
           Home

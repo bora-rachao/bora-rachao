@@ -1,4 +1,4 @@
-@extends('layouts/app')
+@extends('layouts.app')
 @section('content')
 
 <section class="container mx-auto px-4 my-8">
@@ -14,7 +14,7 @@
           alt="futebol"
         />
         <div
-          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+          class="absolute top-0 left-0 h-full w-full bg-linear-to-t from-cyan-600/60 to-black/50 z-10"
         ></div>
         <p
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-2xl font-semibold italic drop-shadow-lg"

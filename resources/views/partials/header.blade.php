@@ -56,15 +56,20 @@
                 </div>
             </nav>
             <div>
-                <a href="/app/Views/index.html">
-                    <img src="/resources/assets/images/logos/logo-bora-rachao-black.png" alt="logo"
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/logos/logo-bora-rachao-black.png') }}" alt="logo"
                         class="max-w-[175px] object-cover" />
                 </a>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a href="/app/Views/index.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
+                <a href="{{ route('home') }}"
+                    class="{{ request()->routeIs('home') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Home
+                </a>
                 <a href="/app/Views/general/contact.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
+                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                    Contato
+                </a>
                 <a href="/app/Views/match/matches.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
                 <a href="/app/Views/sports/sports.html"
@@ -74,9 +79,15 @@
             </nav>
             <div class="flex items-center space-x-3">
                 <a href="/app/Views/user/profile.html">
-                    <img src="/resources/assets/images/beaamonteiro.jpg"
-                        class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-                        alt="Profile Photo" />
+                    @if (auth()->user()->avatar)
+                        <img src="{{ asset('storage/avatars' . auth()->user()->avatar) }}"
+                            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+                            alt="Profile Photo" />
+                    @else
+                        <img src="{{ asset('assets/images/default/user.jpg') }}"
+                            class="w-9 h-9 rounded-full border-3 border-gray-400 hover:border-cyan-500 duration-300 ease-in-out"
+                            alt="Profile Photo" />
+                    @endif
                 </a>
                 <div class="hidden md:block">
                     <a href="/app/Views/match/matches.html"
@@ -153,7 +164,8 @@
                 </a>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a href="/app/Views/index.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
+                <a href="/app/Views/index.html"
+                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
                 <a href="/app/Views/general/contact.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
                 <a href="/app/Views/match/matches.html"
@@ -165,7 +177,7 @@
             </nav>
             <div class="hidden md:flex items-center space-x-3">
                 <div>
-                    <a href="/app/Views/auth/register.html"
+                    <a href="{{ route('auth.register') }}"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         <i class="fa-solid fa-plus"></i>
                         Criar Conta
