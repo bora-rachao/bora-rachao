@@ -419,4 +419,12 @@ TAILWIND LABS. Tailwind CSS: Rapidly build modern websites without ever leaving 
 
 W3SCHOOLS. W3Schools: tutorial de desenvolvimento web. 2025. Disponível em: [https://www.w3schools.com/](https://www.w3schools.com/). Acesso em: 10 jun. 2025. 
 
+LARAVEL. Laravel - The PHP Framework for Web Artisans. Disponível em: [https://laravel.com/](https://laravel.com/). Acesso em: 7 nov. 2025.
+
+MERMAID. Mermaid - Diagramming and charting tool. Disponível em: [https://www.mermaidchart.com/](https://www.mermaidchart.com/). Acesso em: 23 ago. 2025.
+
+CANVA. Canva - Crie designs incríveis e gratuitos. Disponível em: [https://www.canva.com/](https://www.canva.com/). Acesso em: 6 out. 2025.
+
+DRAW.IO. draw.io - Security-first diagramming for teams. Disponível em: [https://www.drawio.com/](https://www.drawio.com/). Acesso em: 21 out. 2025.
+
 [Voltar para o início](#inicio)
