@@ -27,7 +27,7 @@
                 </p>
             </div>
             <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white">
-                <form action="#" id="form_login">
+                <form action="{{ route('auth.login.store') }}" method="POST" id="form_login">
                     <div class="flex flex-col gap-y-6">
                         <div class="flex flex-col gap-2">
                             <label class="text-gray-700 text-md" for="email">

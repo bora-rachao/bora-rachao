@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class SportsSeeder extends Seeder
 {
+    use WithoutModelEvents;
+    
     /**
      * Run the database seeds.
      */

@@ -190,7 +190,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="/app/Views/auth/login.html"
+                    <a href="{{ route('auth.login.create') }}"
                         class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Acessar
                         <i class="fa-solid fa-arrow-right"></i>
