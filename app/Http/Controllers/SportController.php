@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sport;
 use Illuminate\Http\Request;
 
 class SportController extends Controller
 {
     public function index()
     {
-        return view('sports/sports');
+        $sports = Sport::all();
+        return view('sports/sports', compact('sports'));
     }
 }
