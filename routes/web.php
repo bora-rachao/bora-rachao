@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GeneralController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -23,3 +24,12 @@ Route::prefix('auth')
     });
 
 Route::get('/sports', [SportController::class, 'index'])->name('sports');
+
+Route::prefix('general')
+    ->name('general.')
+    ->group(function () {
+        // Coloquem aqui as rotas, somente a get
+        // About
+        // terms
+        // policy
+    });
