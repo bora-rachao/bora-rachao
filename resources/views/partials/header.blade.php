@@ -33,7 +33,7 @@
                             <i class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Partidas
                         </a>
-                        <a href="/app/Views/sports/sports.html"
+                        <a href="{{ route('sports') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Esportes
@@ -72,8 +72,10 @@
                 </a>
                 <a href="/app/Views/match/matches.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
-                <a href="/app/Views/sports/sports.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Esportes</a>
+                <a href="{{ route('sports') }}"
+                    class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Esportes
+                </a>
                 <a href="/app/Views/general/about.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Sobre</a>
             </nav>
@@ -134,7 +136,7 @@
                             <i class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Partidas
                         </a>
-                        <a href="/app/Views/sports/sports.html"
+                        <a href="{{ route('sports') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Esportes
@@ -158,20 +160,24 @@
                 </div>
             </nav>
             <div>
-                <a href="/app/Views/index.html">
-                    <img src="/resources/assets/images/logos/logo-bora-rachao-black.png" alt="logo"
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/logos/logo-bora-rachao-black.png') }}" alt="logo"
                         class="max-w-[175px] object-cover" />
                 </a>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a href="/app/Views/index.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
+                <a href="{{ route('home') }}"
+                    class="{{ request()->routeIs('home') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Home
+                </a>
                 <a href="/app/Views/general/contact.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
                 <a href="/app/Views/match/matches.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
-                <a href="/app/Views/sports/sports.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Esportes</a>
+                <a href="{{ route('sports') }}"
+                    class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Esportes
+                </a>
                 <a href="/app/Views/general/about.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Sobre</a>
             </nav>
@@ -184,7 +190,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="/app/Views/auth/login.html"
+                    <a href="{{ route('auth.login.create') }}"
                         class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Acessar
                         <i class="fa-solid fa-arrow-right"></i>

@@ -151,7 +151,7 @@
                     </div>
                 </form>
                 <div class="flex justify-between pt-6 text-sm text-gray-600">
-                    <a href="/app/Views/auth/login.html" class="hover:text-cyan-500 duration-300 ease-in-out">
+                    <a href="{{ route('auth.login.create') }}" class="hover:text-cyan-500 duration-300 ease-in-out">
                         Já tenho uma conta
                     </a>
                 </div>
