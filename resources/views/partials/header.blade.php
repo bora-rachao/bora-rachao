@@ -38,7 +38,7 @@
                             <i class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Esportes
                         </a>
-                        <a href="/app/Views/general/about.html"
+                        <a href="{{ route('general.about') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Sobre

@@ -31,7 +31,7 @@
           Contato
         </a>
         <a
-          href="/app/Views/general/about.html"
+          href="{{ route('general.about') }}"
           class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
         >
           Sobre

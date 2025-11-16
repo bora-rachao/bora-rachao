@@ -2,7 +2,20 @@
 @section('pageTitle', 'Sobre')
 @section('content')
 
-    <!--Description section-->
+    <!--Title section-->
+    <section class="container mx-auto px-4 my-8">
+      <div class="lg:p-2 leading-[1.1] border-l-8 border-l-cyan-500">
+        <h2
+          class="ps-2 text-4xl lg:text-[3rem] text-gray-700 font-semibold capitalize"
+        >
+          sobre
+        </h2>
+      </div>
+    </section>
+
+    <!--subtitle section-->
+
+<!--Description section-->
     <section class="container px-4 mx-auto">
       <div class="md:flex items-center group">
         <div
@@ -29,7 +42,7 @@
         <div>
           <img
             class="md:ms-[-20px] group-hover:md:ms-0 object-cover border-5 border-b-orange-500 border-l-cyan-500 border-r-amber-500 border-t-lime-500 rounded-4xl w-400 duration-300 ease-in-out"
-            src="/resources/assets/images/team-bora-rachao.jpg"
+            src='/resources/assets/images/team-bora-rachao.jpg'
             alt="Time BoraRachão"
           />
         </div>

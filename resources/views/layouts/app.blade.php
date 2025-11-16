@@ -21,10 +21,10 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50">
-    @include('partials/header')
+    @include('partials.header')
     <main class="min-h-dvh">
         @yield('content')
     </main>
-    @include('partials/footer')
+    @include('partials.footer')
 </body>
 </html>
