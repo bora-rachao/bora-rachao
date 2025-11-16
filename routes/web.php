@@ -29,7 +29,7 @@ Route::prefix('general')
     ->name('general.')
     ->group(function () {
         // Coloquem aqui as rotas, somente a get
-        // About
+        Route::get('/about', [GeneralController::class, 'about'])->name('about');
         // terms
         // policy
     });
