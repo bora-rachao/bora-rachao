@@ -91,11 +91,18 @@
                             alt="Profile Photo" />
                     @endif
                 </a>
-                <div class="hidden md:block">
+                <div class="hidden md:flex items-center space-x-3">
                     <a href="/app/Views/match/matches.html"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Bora jogar!
                     </a>
+                    <div>
+                        <form action="{{ route('auth.logout') }}" method="POST">
+                            @csrf
+                            <button class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+                                type="submit">Sair <i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,7 +190,7 @@
             </nav>
             <div class="hidden md:flex items-center space-x-3">
                 <div>
-                    <a href="{{ route('auth.register') }}"
+                    <a href="{{ route('auth.register.create') }}"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         <i class="fa-solid fa-plus"></i>
                         Criar Conta

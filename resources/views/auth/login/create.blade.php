@@ -28,30 +28,39 @@
             </div>
             <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white">
                 <form action="{{ route('auth.login.store') }}" method="POST" id="form_login">
+                    @csrf
                     <div class="flex flex-col gap-y-6">
                         <div class="flex flex-col gap-2">
                             <label class="text-gray-700 text-md" for="email">
                                 <i class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                                 Email
                             </label>
-                            <input id="email" name="email" type="email" placeholder="Digite seu endereço de email"
+                            <input id="email" name="email" type="email" placeholder="Digite seu endereço de email" value="{{ old('email') }}"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="email">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            @error('email')
+                                <p class="text-xs leading-4 text-red-500 -mt-1">
+                                    {{ $message }}
+                                </p>
+                            @enderror
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-gray-700 text-md" for="password">
-                                <i
-                                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>
+                                <i class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>
                                 Senha
                             </label>
                             <input id="password" name="password" type="password" placeholder="Digite sua senha"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="password">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            @error('password')
+                                <p class="text-xs leading-4 text-red-500 -mt-1">
+                                    {{ $message }}
+                                </p>
+                            @enderror
                         </div>
+                        @error('error')
+                            <p class="text-sm leading-4 text-red-500 -mt-1">
+                                {{ $message }}
+                            </p>
+                        @enderror
                     </div>
                     <div>
                         <button type="submit"
@@ -65,7 +74,7 @@
                     <a href="forgot-password.html" class="hover:text-cyan-500 duration-300 ease-in-out">
                         Esqueci a minha senha
                     </a>
-                    <a href="{{ route('auth.register') }}" class="hover:text-cyan-500 duration-300 ease-in-out">
+                    <a href="{{ route('auth.register.create') }}" class="hover:text-cyan-500 duration-300 ease-in-out">
                         Criar uma conta
                     </a>
                 </div>
