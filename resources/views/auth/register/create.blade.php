@@ -4,7 +4,7 @@
     <section class="font-md">
         <div class="grid lg:grid-cols-2 min-h-screen">
             <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white order-last lg:order-first">
-                <form action="{{ route('auth.store') }}" id="form_register" method="POST">
+                <form action="{{ route('auth.register.store') }}" id="form_register" method="POST">
                     @csrf
                     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-6 gap-x-6">
                         <div class="flex flex-col gap-2">
