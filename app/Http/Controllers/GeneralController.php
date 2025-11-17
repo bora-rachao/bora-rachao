@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class GeneralController extends Controller
 {
+    public function about()
+    {
+        return view('general.about');
+    }
+  
     public function privacyPolicy()
     {
         return view('general.privacy-policy');
@@ -15,7 +20,6 @@ class GeneralController extends Controller
     {
         return view('general.terms-of-use');
     }
-
 
     public function contact()
     {

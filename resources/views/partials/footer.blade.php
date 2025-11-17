@@ -19,7 +19,8 @@
                 class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-500' }} hover:text-cyan-500 duration-300 ease-in-out">
                 Contato
             </a>
-            <a href="/app/Views/general/about.html" class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
+            <a href="{{ route('general.about') }}"
+                class="{{ request()->routeIs('general.about') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-500' }} hover:text-cyan-500 duration-300 ease-in-out">
                 Sobre
             </a>
             <a href="/app/Views/general/privacy-policy.html"
