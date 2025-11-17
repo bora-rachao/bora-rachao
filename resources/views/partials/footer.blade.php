@@ -20,7 +20,7 @@
       >
         <a
           href="{{ route('home') }}"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          class="{{ request()->routeIs('home') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out"
         >
           Home
         </a>
@@ -43,8 +43,8 @@
           Política de Privacidade
         </a>
         <a
-          href="/app/Views/general/terms-of-use.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          href="{{ route("general.terms-of-use") }}"
+          class="{{ request()->routeIs('general.terms-of-use') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out"
         >
           Termos de Uso
         </a>
