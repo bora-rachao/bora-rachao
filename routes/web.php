@@ -30,6 +30,6 @@ Route::prefix('general')
     ->group(function () {
         // Coloquem aqui as rotas, somente a get
         // About
-        // terms
-        // policy
+        Route::get('/privacy-policy', [GeneralController::class, 'privacyPolicy'])->name('privacy-policy');
+        Route::get('/terms-of-use', [GeneralController::class, 'termsOfUse'])->name('terms-of-use');
     });
