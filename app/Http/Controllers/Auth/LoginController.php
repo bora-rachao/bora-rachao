@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\Login\StoreRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -18,19 +19,14 @@ class LoginController extends Controller
     {
         $input = $request->validated();
 
-        $credentials = [
-            'email' => $input['email'],
-            'password' => $input['password'],
-        ];
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended(route('home'));
+        if (!Auth::attempt($input)) {
+            throw ValidationException::withMessages([
+                'error' => __('auth.failed') 
+            ]);
         }
-
-        return back()
-            ->withErrors(['error' => 'Credenciais inválidas.'])
-            ->onlyInput('email');
+        
+        $request->session()->regenerate();
+        return redirect()->intended(route('home'));
     }
 
     public function destroy(Request $request)
