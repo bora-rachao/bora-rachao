@@ -15,4 +15,10 @@ class GeneralController extends Controller
     {
         return view('general.terms-of-use');
     }
+
+
+    public function contact()
+    {
+        return view('general.contact');
+    }
 }

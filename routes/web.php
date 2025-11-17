@@ -28,8 +28,7 @@ Route::get('/sports', [SportController::class, 'index'])->name('sports');
 Route::prefix('general')
     ->name('general.')
     ->group(function () {
-        // Coloquem aqui as rotas, somente a get
-        // About
+        Route::get('/contact', [GeneralController::class, 'contact'])->name('contact');
         Route::get('/privacy-policy', [GeneralController::class, 'privacyPolicy'])->name('privacy-policy');
         Route::get('/terms-of-use', [GeneralController::class, 'termsOfUse'])->name('terms-of-use');
     });
