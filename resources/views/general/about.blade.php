@@ -13,8 +13,6 @@
       </div>
     </section>
 
-    <!--subtitle section-->
-
 <!--Description section-->
     <section class="container px-4 mx-auto">
       <div class="md:flex items-center group">
@@ -42,7 +40,7 @@
         <div>
           <img
             class="md:ms-[-20px] group-hover:md:ms-0 object-cover border-5 border-b-orange-500 border-l-cyan-500 border-r-amber-500 border-t-lime-500 rounded-4xl w-400 duration-300 ease-in-out"
-            src='/resources/assets/images/team-bora-rachao.jpg'
+            src='{{ asset('assets/images/team-bora-rachao.jpg') }}'
             alt="Time BoraRachão"
           />
         </div>
@@ -113,7 +111,7 @@
         >
           <img
             class="h-64 w-64 md:ms-[-20px] group-hover:md:ms-0 object-cover rounded-4xl object-cover border-5 border-cyan-500 duration-300 ease-in-out"
-            src="/resources/assets/images/eullerls.jpeg"
+            src='{{ asset('assets/images/eullerls.jpeg') }}'
             alt="eullerls"
           />
         </div>
@@ -132,7 +130,7 @@
         <div class="py-2 flex justify-center md:justify-end z-10 items-center">
           <img
             class="h-64 w-64 md:me-[-20px] group-hover:md:me-0 object-cover rounded-4xl object-cover border-5 border-lime-500 duration-300 ease-in-out"
-            src="/resources/assets/images/lucasbardeli.jpg"
+            src='{{ asset ('assets/images/lucasbardeli.jpg') }}'
             alt="lucasbardeli"
           />
         </div>
@@ -238,7 +236,7 @@
         >
           <img
             class="h-64 w-64 md:ms-[-20px] group-hover:md:ms-0 object-cover rounded-4xl object-cover border-5 border-orange-500 duration-300 ease-in-out"
-            src="/resources/assets/images/joaofran.jpg"
+            src='{{ asset ('assets/images/joaofran.jpg') }}'
             alt="João Francisco"
           />
         </div>
@@ -257,7 +255,7 @@
         <div class="py-2 flex justify-center md:justify-end z-10 items-center">
           <img
             class="h-64 w-64 md:me-[-20px] group-hover:md:me-0 object-cover rounded-4xl object-cover border-5 border-amber-400 duration-300 ease-in-out"
-            src="/resources/assets/images/gabribeiro.jpg"
+            src='{{ asset ('assets/images/gabribeiro.jpg') }}'
             alt="gabribeiro"
           />
         </div>
@@ -360,7 +358,7 @@
         >
           <img
             class="h-64 w-64 md:ms-[-20px] group-hover:md:ms-0 object-cover rounded-4xl object-cover border-5 border-red-500 duration-300 ease-in-out"
-            src="/resources/assets/images/beaamonteiro.jpg"
+            src='{{ asset('assets/images/beaamonteiro.jpg') }}'
             alt="beaamonteiro"
           />
         </div>
