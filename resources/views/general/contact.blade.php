@@ -42,7 +42,8 @@
                                             class="fa-solid fa-user text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                                         Nome Completo
                                     </label>
-                                    <input id="name" name="name" placeholder="Ex: João Pedro Silva" value="{{ auth()->user()?->name ?? '' }}" type="text"
+                                    <input id="name" name="name" placeholder="Ex: João Pedro Silva"
+                                        value="{{ auth()->user()?->name ?? '' }}" type="text"
                                         class="w-full shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
                                     <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="name">
                                         O campo precisa ser preenchido corretamente.

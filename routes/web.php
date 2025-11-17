@@ -11,16 +11,24 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('auth')
     ->name('auth.')
-    ->middleware('guest')
     ->group(function () {
-        Route::get('/register', [RegisterController::class, 'create'])->name('register');
-        Route::post('/register', [RegisterController::class, 'store'])->name('store');
-        Route::
-            name('login.')
+        Route::name('register.')
+            ->prefix('register')
+            ->middleware('guest')
             ->group(function () {
-            Route::get('/login', [LoginController::class, 'create'])->name('create');
-            Route::post('/login', [LoginController::class, 'store'])->name('store');
-        });
+                Route::get('/', [RegisterController::class, 'create'])->name('create');
+                Route::post('/', [RegisterController::class, 'store'])->name('store');
+            });
+        Route::name('login.')
+            ->prefix('login')
+            ->middleware('guest')
+            ->group(function () {
+                Route::get('/', [LoginController::class, 'create'])->name('create');
+                Route::post('/', [LoginController::class, 'store'])->name('store');
+            });
+        Route::post('/logout', [LoginController::class, 'destroy'])
+            ->name('logout')
+            ->middleware('auth');
     });
 
 Route::get('/sports', [SportController::class, 'index'])->name('sports');
