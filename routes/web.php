@@ -13,16 +13,22 @@ Route::prefix('auth')
     ->name('auth.')
     ->group(function () {
         Route::name('register.')
+            ->prefix('register')
+            ->middleware('guest')
             ->group(function () {
-            Route::get('/register', [RegisterController::class, 'create'])->name('create')->middleware('guest');
-            Route::post('/register', [RegisterController::class, 'store'])->name('store')->middleware('guest');
-        });
+                Route::get('/', [RegisterController::class, 'create'])->name('create');
+                Route::post('/', [RegisterController::class, 'store'])->name('store');
+            });
         Route::name('login.')
+            ->prefix('login')
+            ->middleware('guest')
             ->group(function () {
-            Route::get('/login', [LoginController::class, 'create'])->name('create')->middleware('guest');
-            Route::post('/login', [LoginController::class, 'store'])->name('store')->middleware('guest');
-        });
-        Route::post('/logout', [LoginController::class, 'destroy'])->name('logout')->middleware('auth');
+                Route::get('/', [LoginController::class, 'create'])->name('create');
+                Route::post('/', [LoginController::class, 'store'])->name('store');
+            });
+        Route::post('/logout', [LoginController::class, 'destroy'])
+            ->name('logout')
+            ->middleware('auth');
     });
 
 Route::get('/sports', [SportController::class, 'index'])->name('sports');

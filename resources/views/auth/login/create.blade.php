@@ -35,32 +35,22 @@
                                 <i class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                                 Email
                             </label>
-                            <input id="email" name="email" type="email" placeholder="Digite seu endereço de email" value="{{ old('email') }}"
+                            <input id="email" name="email" type="email" placeholder="Digite seu endereço de email"
+                                value="{{ old('email') }}"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            @error('email')
-                                <p class="text-xs leading-4 text-red-500 -mt-1">
-                                    {{ $message }}
-                                </p>
-                            @enderror
+                            <x-forms.error name="email" />
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-gray-700 text-md" for="password">
-                                <i class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>
+                                <i
+                                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>
                                 Senha
                             </label>
                             <input id="password" name="password" type="password" placeholder="Digite sua senha"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            @error('password')
-                                <p class="text-xs leading-4 text-red-500 -mt-1">
-                                    {{ $message }}
-                                </p>
-                            @enderror
+                            <x-forms.error name="password" />
                         </div>
-                        @error('error')
-                            <p class="text-sm leading-4 text-red-500 -mt-1">
-                                {{ $message }}
-                            </p>
-                        @enderror
+                        <x-forms.error name="error" class="text-sm!" />
                     </div>
                     <div>
                         <button type="submit"
