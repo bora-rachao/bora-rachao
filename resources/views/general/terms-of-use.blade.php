@@ -14,7 +14,7 @@
     <!-- Conteúdo principal -->
     <section class="max-w-4xl mx-auto mb-18 bg-white p-8 mt-10 shadow rounded-xl">
         <div class="text-gray-600">
-            <h2 class="text-2xl font-semibold text-gray-700 py-3">
+            <h2 class="text-4xl font-semibold text-gray-700 py-3">
                 Nossos Termos de Uso
             </h2>
             <p>
@@ -81,7 +81,7 @@
             <h3 class="text-2xl font-semibold text-gray-700 py-3">7. Contato</h3>
             <p>
                 Em caso de dúvidas ou denúncias, entre em
-                <a href="/app/Views/general/contact.html" class="text-cyan-500 hover:underline">contato conosco</a>.
+                <a href="{{ route('general.contact') }}" class="text-cyan-500 hover:underline">contato conosco</a>.
             </p>
             <p class="mt-6 text-sm text-gray-500">
                 Última atualização: Junho de 2025

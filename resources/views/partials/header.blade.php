@@ -66,8 +66,8 @@
                     class="{{ request()->routeIs('home') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Home
                 </a>
-                <a href="/app/Views/general/contact.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('general.contact') }}"
+                    class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Contato
                 </a>
                 <a href="/app/Views/match/matches.html"
@@ -170,8 +170,8 @@
                     class="{{ request()->routeIs('home') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Home
                 </a>
-                <a href="/app/Views/general/contact.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
+                <a href="{{ route('general.contact') }}"
+                    class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
                 <a href="/app/Views/match/matches.html"
                     class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
                 <a href="{{ route('sports') }}"
