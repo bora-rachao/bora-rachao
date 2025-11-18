@@ -12,7 +12,7 @@
     </section>
 
     <!-- Conteúdo principal -->
-    <section class="max-w-4xl mb-18 mx-auto bg-white p-8 mt-10 rounded shadow rounded-xl">
+    <section class="max-w-4xl mb-18 mx-auto bg-white p-8 mt-10 shadow rounded-xl">
         <div>
             <h2 class="text-2xl font-semibold text-gray-700 py-3">
                 Nossa Políticas
