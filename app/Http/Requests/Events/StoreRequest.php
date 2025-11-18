@@ -11,7 +11,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,15 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'sport_id' => ['required', 'exists:sports,id'],
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['nullable', 'string', 'max:1024'],
+            'event_date' => ['required', 'datetime', 'after:now'],
+            'min_age' => ['nullable', 'integer', 'min:14'],
+            'max_players' => ['required', 'integer', 'min:2'],
+            'status' => ['required', 'in:scheduled,cancelled,completed'],
+            'zip_code' => ['required', 'string', 'digits:8'],
+            'house_number' => ['required', 'string', 'max:10'],
         ];
     }
 }
