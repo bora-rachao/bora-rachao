@@ -18,12 +18,12 @@
                     <div class="text-gray-700 flex flex-col gap-y-3">
                         <h3 class="text-2xl">Menu</h3>
                         <hr class="text-gray-300" />
-                        <a href="/app/Views/index.html"
+                        <a href="{{ route('home') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Home
                         </a>
-                        <a href="/app/Views/general/contact.html"
+                        <a href="{{ route('general.contact') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Contato
@@ -71,13 +71,17 @@
                     Contato
                 </a>
                 <a href="/app/Views/match/matches.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
+                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                    Partidas
+                </a>
                 <a href="{{ route('sports') }}"
                     class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Esportes
                 </a>
                 <a href="{{ route('general.about') }}"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Sobre</a>
+                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                    Sobre
+                </a>
             </nav>
             <div class="flex items-center space-x-3">
                 <a href="/app/Views/user/profile.html">
@@ -91,11 +95,19 @@
                             alt="Profile Photo" />
                     @endif
                 </a>
-                <div class="hidden md:block">
+                <div class="hidden md:flex items-center space-x-3">
                     <a href="/app/Views/match/matches.html"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Bora jogar!
                     </a>
+                    <div>
+                        <form action="{{ route('auth.logout') }}" method="POST">
+                            @csrf
+                            <button
+                                class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+                                type="submit">Sair <i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,12 +133,12 @@
                     <div class="text-gray-700 flex flex-col gap-y-3">
                         <h3 class="text-2xl">Menu</h3>
                         <hr class="text-gray-300" />
-                        <a href="/app/Views/index.html"
+                        <a href="{{ route('home') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Home
                         </a>
-                        <a href="/app/Views/general/contact.html"
+                        <a href="{{ route('general.contact') }}"
                             class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Contato
@@ -146,11 +158,11 @@
                             <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Sobre
                         </a>
-                        <a href="/app/Views/auth/login.html"
+                        <a href="{{ route('auth.login.create') }}"
                             class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                             Acessar
                             <i class="fa-solid fa-arrow-right"></i>
-                            <a href="/app/Views/auth/register.html"
+                            <a href="{{ route('auth.register.create') }}"
                                 class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                                 <i class="fa-solid fa-plus"></i>
                                 Criar uma Conta
@@ -171,19 +183,25 @@
                     Home
                 </a>
                 <a href="{{ route('general.contact') }}"
-                    class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
+                    class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Contato
+                </a>
                 <a href="/app/Views/match/matches.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
+                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                    Partidas
+                </a>
                 <a href="{{ route('sports') }}"
                     class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Esportes
                 </a>
                 <a href="{{ route('general.about') }}"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Sobre</a>
+                    class="{{ request()->routeIs('general.about') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
+                    Sobre
+                </a>
             </nav>
             <div class="hidden md:flex items-center space-x-3">
                 <div>
-                    <a href="{{ route('auth.register') }}"
+                    <a href="{{ route('auth.register.create') }}"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         <i class="fa-solid fa-plus"></i>
                         Criar Conta
