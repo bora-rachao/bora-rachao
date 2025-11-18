@@ -18,7 +18,7 @@
                 class="relative group rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-70 w-full">
                 @if ($sport->image)
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
-                        src="{{ asset('assets/images/sports/' . $sport->image) }}" alt="{{ $sport->name }}" />
+                        src="{{ asset('assets/images/sports/' . $sport->image) }}" alt="{{ $sport->name }} Image" />
                 @else
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="{{ asset('assets/images/default/sport.png') }}" alt="{{ $sport->name }}" />

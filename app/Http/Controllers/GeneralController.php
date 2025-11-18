@@ -6,5 +6,23 @@ use Illuminate\Http\Request;
 
 class GeneralController extends Controller
 {
-    // Coloquem aqui as chamadas das Views
+    public function about()
+    {
+        return view('general.about');
+    }
+  
+    public function privacyPolicy()
+    {
+        return view('general.privacy-policy');
+    }
+
+    public function termsOfUse()
+    {
+        return view('general.terms-of-use');
+    }
+
+    public function contact()
+    {
+        return view('general.contact');
+    }
 }
