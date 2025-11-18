@@ -70,16 +70,14 @@
                     class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Contato
                 </a>
-                <a href="/app/Views/match/matches.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="/app/Views/match/matches.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
                     Partidas
                 </a>
                 <a href="{{ route('sports') }}"
                     class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Esportes
                 </a>
-                <a href="{{ route('general.about') }}"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('general.about') }}" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
                     Sobre
                 </a>
             </nav>
@@ -96,16 +94,13 @@
                     @endif
                 </a>
                 <div class="hidden md:flex items-center space-x-3">
-                    <a href="/app/Views/match/matches.html"
-                        class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
-                        Bora jogar!
-                    </a>
+                    <x-general.button title='Bora jogar!' href='/app/Views/match/matches.html'
+                        color='bg-cyan-500 hover:bg-cyan-400 hover:shadow-cyan-400/35' />
                     <div>
                         <form action="{{ route('auth.logout') }}" method="POST">
                             @csrf
-                            <button
-                                class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
-                                type="submit">Sair <i class="fa-solid fa-arrow-right"></i></button>
+                            <x-general.button title="Sair" color="bg-lime-500 hover:bg-lime-400 hover:shadow-lime-400/50"
+                                icon="fa-solid fa-arrow-right-from-bracket" />
                         </form>
                     </div>
                 </div>

@@ -88,11 +88,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <button type="submit"
-                                class="mt-5 w-full bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
-                                Enviar mensagem
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </button>
+                            <x-general.button title="Enviar mensagem" class="mt-5 w-full justify-center"
+                                color="bg-cyan-500 hover:bg-cyan-400 hover:shadow-cyan-400/35"
+                                icon="fa-solid fa-paper-plane" />
                         </form>
                     </div>
                 </div>
