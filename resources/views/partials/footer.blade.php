@@ -23,9 +23,9 @@
                 class="{{ request()->routeIs('general.about') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-500' }} hover:text-cyan-500 duration-300 ease-in-out">
                 Sobre
             </a>
-            <a href="/app/Views/general/privacy-policy.html"
-                class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
-                Política de Privacidade
+            <a href="{{ route('general.privacy-policy') }}"
+                class="{{ request()->routeIs('general.privacy-policy') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-500' }} hover:text-cyan-500 duration-300 ease-in-out">
+                Políticas de Privacidades
             </a>
             <a href="{{ route('general.terms-of-use') }}"
                 class="{{ request()->routeIs('general.terms-of-use') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-500' }} hover:text-cyan-500 duration-300 ease-in-out">
