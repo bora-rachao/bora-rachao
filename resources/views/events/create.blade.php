@@ -24,48 +24,43 @@
                                 <i class="fa-solid fa-trophy text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                                 Esporte
                             </label>
-                            <select id="sport_id" placeholder="Escolha a opção..." type="text"
+                            <select name="sport_id" id="sport_id" placeholder="Escolha a opção..." type="text"
                                 class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out">
                                 <option value="" disabled>Selecione um esporte</option>
                                 @foreach ($sports as $sport)
-                                    <option value="{{ $sport->id_sport }}" @selected(old('sport') === $sport->name)>
+                                    <option value="{{ $sport->id_sport }}" @selected(old('sport_id') == $sport->id_sport)>
                                         {{ $sport->name }}
                                     </option>
                                 @endforeach
                             </select>
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="name">
-                                O campo precisa ser preenchido.
-                            </p>
+                            <x-forms.error name="sport_id" />
                         </div>
 
                         <!-- Nome do Bora -->
                         <div class="flex flex-col col-span-4 gap-1.5">
-                            <label class="text-gray-700 text-md" for="name">
+                            <label class="text-gray-700 text-md" for="title">
                                 <i
                                     class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                                 Nome do Bora
                             </label>
-                            <input id="name" placeholder="Ex: Volêi no Kartódromo" type="text"
+                            <input name="title" id="title" value="{{ old('title') }}"
+                                placeholder="Ex: Volêi no Kartódromo" type="text"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="name">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            <x-forms.error name="title" />
                         </div>
 
                         <div class="flex flex-col col-span-2 gap-1.5">
-                            <label class="text-gray-700 text-md" for="sport_id">
+                            <label class="text-gray-700 text-md" for="visibility">
                                 <i class="fa-solid fa-eye text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                                 Visibilidade
                             </label>
-                            <select id="sport_id" placeholder="Escolha a opção..." type="text"
+                            <select name="visibility" id="visibility" placeholder="Escolha a opção..." type="text"
                                 class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out">
                                 <option value="" disabled>Selecione uma visibilidade</option>
-                                <option value="public">Aberto</option>
-                                <option value="only_friens">Apenas amigos</option>
+                                <option value="public" @selected(old('visibility') === 'public')>Aberto</option>
+                                <option value="only_friends" @selected(old('visibility') === 'only_friends')>Apenas amigos</option>
                             </select>
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="name">
-                                O campo precisa ser preenchido.
-                            </p>
+                            <x-forms.error name="visibility" />
                         </div>
 
                         <!-- Data -->
@@ -75,11 +70,9 @@
                                     class="fa-solid fa-calendar-days text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
                                 Data
                             </label>
-                            <input id="event_date" type="datetime-local"
+                            <input name="event_date" id="event_date" type="datetime-local" value="{{ old('event_date') }}"
                                 class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="date">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            <x-forms.error name="event_date" />
                         </div>
 
                         <!-- Número de participantes -->
@@ -88,12 +81,12 @@
                                 <i
                                     class="fa-solid fa-user-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                                 Nº de Participantes
+                                <span class="text-gray-400 italic text-xs">(incluindo você)</span>
                             </label>
-                            <input id="max_players" placeholder="12" type="number" min="2" max="30"
+                            <input name="max_players" id="max_players" placeholder="12" type="number" min="2"
+                                max="30" value="{{ old('max_players') }}"
                                 class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="players">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            <x-forms.error name="max_players" />
                         </div>
 
                         <!-- Idade mínima -->
@@ -103,11 +96,10 @@
                                     class="fa-solid fa-triangle-exclamation text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
                                 Idade mínima
                             </label>
-                            <input id="min_age" placeholder="18" type="number" min="14"
+                            <input name="min_age" id="min_age" placeholder="18" type="number" min="14"
+                                max="100" value="{{ old('min_age', 14) }}"
                                 class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="age">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                            <x-forms.error name="min_age" />
                         </div>
 
                         <!-- Descrição -->
@@ -120,10 +112,8 @@
                             <textarea id="description"
                                 placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..." type="text"
                                 name="description" rows="4" maxlength="500"
-                                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"></textarea>
-                            <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="description">
-                                O campo precisa ser preenchido corretamente.
-                            </p>
+                                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out">{{ old('description', '') }}</textarea>
+                            <x-forms.error name="description" />
                         </div>
 
                         <!-- Fieldset -->
@@ -143,25 +133,21 @@
                                                 class="fa-solid fa-map-pin text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-3"></i>
                                             CEP
                                         </label>
-                                        <input id="zip_code" placeholder="Digite o cep..." type="text"
+                                        <input name="zip_code" id="zip_code" placeholder="Digite o cep..." type="text" value="{{ old('zip_code') }}"
                                             class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out" />
-                                        <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="cep">
-                                            O campo precisa ser preenchido corretamente.
-                                        </p>
+                                        <x-forms.error name="zip_code" />
                                     </div>
 
                                     <!-- Número -->
                                     <div class="flex flex-col gap-1.5 col-span-2">
-                                        <label class="text-gray-700 text-md" for="number">
+                                        <label class="text-gray-700 text-md" for="house_number">
                                             <i
                                                 class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
                                             Número
                                         </label>
-                                        <input id="number" placeholder="Número" type="text"
+                                        <input name="house_number" id="house_number" placeholder="Número" type="text" value="{{ old('house_number') }}"
                                             class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full" />
-                                        <p class="text-xs leading-4 text-red-500 -mt-1 hidden" data-error="number">
-                                            O campo precisa ser preenchido corretamente.
-                                        </p>
+                                        <x-forms.error name="house_number" />
                                     </div>
 
                                     <!-- Cidade -->

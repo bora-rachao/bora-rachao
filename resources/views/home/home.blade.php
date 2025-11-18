@@ -4,7 +4,7 @@
     <section class="container mx-auto px-4 my-8">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://clubepaineiras.org.br/wp-content/uploads/2022/05/jogadores.jpg" alt="futebol" />
@@ -18,7 +18,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://cdn.pixabay.com/photo/2020/11/27/18/59/tennis-5782695_1280.jpg" alt="tênis" />
@@ -31,7 +31,7 @@
                 </a>
 
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://webrun.com.br/wp-content/uploads/2021/04/AdobeStock_176854577.jpeg" alt="corrida" />
@@ -45,7 +45,7 @@
             </div>
 
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -58,7 +58,7 @@
             </a>
 
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -73,7 +73,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://images.pexels.com/photos/22763693/pexels-photo-22763693/free-photo-of-woman-playing-tennis-on-beach.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -87,7 +87,7 @@
                 </a>
 
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://cdn.pixabay.com/photo/2016/06/10/03/06/sport-1447323_1280.jpg" alt="futevôlei" />
@@ -103,7 +103,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://images.pexels.com/photos/163407/cyclists-trail-bike-clouds-163407.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -171,7 +171,7 @@
         <div class="my-6">
             <h2 class="text-3xl text-gray-700 font-semibold">
                 <i class="fa-solid fa-location-dot"></i>
-                Acontecendo agora em Jaú
+                Acontecendo agora em {{ ucfirst(auth()->user()->city ?? 'Jaú') }}
             </h2>
         </div>
         <div class="grid lg:grid-cols-4 gap-y-3 lg:gap-y-0 lg:gap-x-3">
@@ -381,7 +381,7 @@
                     Quer ver mais "Bora" de diversos esportes? Acesse pelo botão abaixo
                     e veja todas partidas que estão acontecendo na sua região!
                 </p>
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                     Ver mais partidas...
                 </a>

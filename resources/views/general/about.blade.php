@@ -66,7 +66,7 @@
                 <div class="bg-linear-to-r from-lime-500 to-cyan-500 py-0.5 my-3.5 w-full"></div>
                 <p class="text-xl text-gray-600 indent-8 text-start">
                     Tenho 21 anos e sou estudante do curso de DSM na Fatec Jahu, atuo
-                    também como Desenvolvedor Full Stack na Labi9. Gosto de aprender
+                    também como Desenvolvedor Full Stack. Gosto de aprender
                     novas tecnologias e sempre busco aprimorar minhas habilidades. Além
                     disso, gosto muito de praticar Acadêmia, ouvir música, ver filmes e
                     aproveitar o tempo com amigos e família.
