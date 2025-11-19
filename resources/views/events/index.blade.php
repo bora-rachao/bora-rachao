@@ -215,7 +215,7 @@
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-4">
                 <div>
                     @foreach ($events as $event)
-                    <a href="/app/Views/match/match.html">
+                    <a href="{{ route('events.view', $event->id_event) }}">
                   <div class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
                       <span
                           class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
