@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users', 'id_user');
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('status', 50)->default('scheduled');
+            $table->string('status', 50);
             $table->dateTime('event_date');
             $table->tinyInteger('min_age')->unsigned()->nullable();
             $table->tinyInteger('max_players')->unsigned()->nullable();

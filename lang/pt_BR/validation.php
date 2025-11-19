@@ -242,6 +242,12 @@ return [
         'zip_code' => 'CEP',
         'document' => 'CPF',
         'date_of_birth' => 'data de nascimento',
+        'sport_id' => 'esporte',
+        'event_date' => 'data do bora',
+        'max_players' => 'número de participantes',
+        'min_age' => 'idade mínima',
+        'house_number' => 'número',
+        'visibility' => 'visibilidade',
     ],
 
 ];
