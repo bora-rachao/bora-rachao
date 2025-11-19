@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('pageTitle', 'Partidas')
 @section('content')
     <section class="my-8">
         <div class="container mx-auto px-4">
