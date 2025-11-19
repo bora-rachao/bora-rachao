@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -46,9 +48,28 @@ Route::get('/sports', [SportController::class, 'index'])->name('sports');
 
 Route::prefix('general')
     ->name('general.')
+    ->controller(GeneralController::class)
     ->group(function () {
-        Route::get('/about', [GeneralController::class, 'about'])->name('about');
-        Route::get('/contact', [GeneralController::class, 'contact'])->name('contact');
-        Route::get('/privacy-policy', [GeneralController::class, 'privacyPolicy'])->name('privacy-policy');
-        Route::get('/terms-of-use', [GeneralController::class, 'termsOfUse'])->name('terms-of-use');
+        Route::get('/about', 'about')->name('about');
+        Route::get('/contact', 'contact')->name('contact');
+        Route::get('/privacy-policy', 'privacyPolicy')->name('privacy-policy');
+        Route::get('/terms-of-use', 'termsOfUse')->name('terms-of-use');
+    });
+
+Route::prefix('profiles')
+    ->name('profiles.')
+    ->controller(ProfileController::class)
+    ->group(function () {
+        Route::get('/{user:username}', 'view')->name('view');
+    });
+
+Route::prefix('users')
+    ->name('users.')
+    ->middleware('auth')
+    ->controller(UserController::class)
+    ->group(function () {
+        Route::get('/profile', 'profile')->name('profile');
+        Route::get('/avatar', 'avatar')->name('avatar');
+        Route::get('/personal', 'personal')->name('personal');
+        Route::get('/password', 'password')->name('password');
     });

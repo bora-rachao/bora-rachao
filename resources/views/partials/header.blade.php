@@ -94,7 +94,7 @@
                 </a>
             </nav>
             <div class="flex items-center space-x-3">
-                <a href="/app/Views/user/profile.html">
+                <a href="{{ route('profiles.view', auth()->user()->username) }}">
                     @if (auth()->user()->avatar)
                         <img src="{{ asset('storage/avatars' . auth()->user()->avatar) }}"
                             class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
@@ -201,8 +201,8 @@
                     class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Contato
                 </a>
-                <a href="/app/Views/match/matches.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('events.index') }}"
+                    class="{{ request()->routeIs('events.index') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Partidas
                 </a>
                 <a href="{{ route('sports') }}"

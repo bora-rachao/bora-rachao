@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -59,13 +60,19 @@ class User extends Authenticatable
         ];
     }
 
-    public function friends(): BelongsToMany
+    public function friends(): HasMany
     {
-        return $this->belongsToMany(User::class, 'friends', 'user_id', 'friend_id');
+        return $this->hasMany(Friend::class, 'user_id')
+            ->orWhere('friend_id', $this->id);
     }
 
-    public function events(): HasMany
+    public function adminEvents(): HasMany
     {
         return $this->hasMany(Event::class, 'user_id');
+    }
+
+    public function joinedEvents(): BelongsToMany
+    {
+        return $this->belongsToMany(Event::class, 'event_players', 'user_id', 'event_id');
     }
 }
