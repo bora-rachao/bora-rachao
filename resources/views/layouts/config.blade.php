@@ -24,7 +24,7 @@
         <div class="col-span-1">
             @include('partials.users.menu')
         </div>
-        <main class="min-h-dvh">
+        <main class="col-span-3 p-7 rounded-xl border border-gray-200 shadow-sm">
             @yield('content')
         </main>
     </div>

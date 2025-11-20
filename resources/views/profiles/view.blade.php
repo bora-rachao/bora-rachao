@@ -37,7 +37,7 @@
                         <a href="/app/Views/user/friends.html"
                             class="text-gray-500 text-sm hover:text-orange-500 duration-300 ease-in-out">
                             <i class="fa-solid fa-users text-xs"></i>
-                            {{ (string) $friendsCount }} amigo(s)
+                            {{ $user->friends_count }} amigo(s)
                         </a>
                     </div>
                     <div>

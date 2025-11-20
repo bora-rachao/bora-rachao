@@ -69,6 +69,7 @@ Route::prefix('users')
     ->controller(UserController::class)
     ->group(function () {
         Route::get('/profile', 'profile')->name('profile');
+        Route::put('/profile', 'profileUpdate')->name('profile.update');
         Route::get('/avatar', 'avatar')->name('avatar');
         Route::get('/personal', 'personal')->name('personal');
         Route::get('/password', 'password')->name('password');
