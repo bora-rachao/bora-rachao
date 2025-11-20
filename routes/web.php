@@ -72,5 +72,7 @@ Route::prefix('users')
         Route::put('/profile', 'profileUpdate')->name('profile.update');
         Route::get('/avatar', 'avatar')->name('avatar');
         Route::get('/personal', 'personal')->name('personal');
+        Route::put('/personal', 'personalUpdate')->name('personal.update');
         Route::get('/password', 'password')->name('password');
+        Route::put('/password', 'passwordUpdate')->name('password.update');
     });

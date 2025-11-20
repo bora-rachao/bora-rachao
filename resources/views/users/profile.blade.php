@@ -1,7 +1,7 @@
 @extends('layouts.config')
 @section('pageTitle', 'Configuração do Perfil')
 @section('content')
-    <form action="{{ route('users.profile.update') }}" id="form_register" method="POST">
+    <form action="{{ route('users.profile.update') }}" method="POST">
         @csrf
         @method('PUT')
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-6 gap-x-6">
@@ -37,10 +37,10 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label class="text-gray-700 text-md" for="bio">
-                    <i class="fa-solid fa-user text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>
+                    <i class="fa-solid fa-pencil text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                     Bio
                     <span class="text-xs opacity-50">
-                        (250 caractéres)
+                        (250 caracteres)
                     </span>
                 </label>
                 <textarea id="bio" name="bio" type="text" rows="4" placeholder="Digite seu nome de usuário"
