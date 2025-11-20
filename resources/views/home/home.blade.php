@@ -175,11 +175,17 @@
             </h2>
         </div>
         <div class="grid lg:grid-cols-4 gap-y-3 lg:gap-y-0 lg:gap-x-3">
-            <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
-                @foreach ($randomEvents as $event)
-                    <x-events.single-block :event="$event" />
-                @endforeach
-            </div>
+            @if (count($randomEvents) > 0)
+                <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
+                    @foreach ($randomEvents as $event)
+                        <x-events.single-block :event="$event" />
+                    @endforeach
+                </div>
+            @else
+                <div class="col-span-3 flex justify-center items-center">
+                    <p class="opacity-50">Nenhuma partida rolando no momento...</p>
+                </div>
+            @endif
 
             <div class="bg-white rounded-xl shadow-lg border border-gray-300 p-4 flex flex-col justify-between gap-4">
                 <div class="text-center">
