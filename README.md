@@ -275,47 +275,45 @@ graph TD
 # 7. Aplicação
 ## Passo a passo de como instalar a aplicação:
 
-### 1. **Clonar repositório** — baixar o projeto localmente:
-```bash
+1. **Clonar repositório** — baixar o projeto localmente:
+```
 git clone https://github.com/bora-rachao/bora-rachao
 ```
-```bash
+```
 cd bora-rachao
 ```
-### 2. Instalar dependências PHP — instala packages do Composer:
-```bash
+
+2. Instalar dependências PHP — instala packages do Composer:
+```
 composer install
 ```
-### 3. Instalar dependências JS:
-```bash
+
+3. Instalar dependências JS:
+```
 npm install
 ```
-### 4. Criar arquivo de ambiente — copia o template:
-```bash
+
+4. Criar arquivo de ambiente — copia o template:
+```
 cp .env.example .env
 ```
 
-### 5. Gerar chave da aplicação — protege dados criptografados:
-```bash
-php artisan migrate
+5. Gerar chave da aplicação — protege dados criptografados:
 ```
-
-### 6. Gerar chave da aplicação — protege dados criptografados:
-```bash
 php artisan key:generate
 ```
 
-### 7. Rodar as migrations:
-```bash
+6. Rodar as migrations:
+```
 php artisan migrate
 ```
 
-### 8. Compilar assets do front-end
-```bash
+7. Compilar assets do front-end
+```
 npm run build
 ```
 
-### 10. Iniciar o servidor:
+8. Iniciar o servidor:
 ```bash
 php artisan serve
 ```
