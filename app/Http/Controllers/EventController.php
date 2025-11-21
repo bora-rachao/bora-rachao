@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\Sport;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
@@ -14,7 +15,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $userId = auth()->id();
+        $userId = Auth::id();
 
         $events = Event::with(['sport', 'address', 'user'])
             ->where('event_date', '>=', now()->subHour()->toDateTimeString())

@@ -1,5 +1,5 @@
 @extends('layouts.config')
-@section('pageTitle', 'Configuração de Senha')
+@section('pageTitle', 'Configuração de Imagem de Perfil')
 @section('content')
     <form action="{{ route('users.avatar.update') }}" method="POST" enctype="multipart/form-data">
         @csrf

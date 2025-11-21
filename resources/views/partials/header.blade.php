@@ -52,7 +52,7 @@
                             class="mt-2 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                             Bora Jogar!
                         </a>
-                        <form action="{{ route('auth.logout') }}" method="POST">
+                        <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button
                                 class="w-full text-lg mt-2 flex items-center justify-center bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-2 rounded-xl duration-300 ease-in-out gap-x-1.5"
@@ -94,6 +94,17 @@
                 </a>
             </nav>
             <div class="flex items-center space-x-3">
+                <a href="{{ route('notifications.index') }}" class="relative hover:cursor-pointer inline-block">
+                    <i
+                        class="fa-solid fa-bell text-gray-500 text-xl py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out">
+                    </i>
+                    @if (auth()->user()->unreadNotifications->count() > 0)
+                        <span
+                            class="absolute top-2 right-2 inline-flex size-2.5 animate-ping rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="absolute top-2 right-2 inline-flex size-2.5 rounded-full bg-orange-500"></span>
+                    @endif
+                </a>
+
                 <a href="{{ route('profiles.view', auth()->user()->username) }}">
                     <img src="{{ auth()->user()?->avatar ? asset('storage/assets/images/users/' . auth()->user()->avatar) : asset('assets/images/default/user.jpg') }}"
                         class="size-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
@@ -104,7 +115,7 @@
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Bora jogar!
                     </a>
-                    <form action="{{ route('auth.logout') }}" method="POST">
+                    <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button
                             class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
@@ -166,12 +177,12 @@
                             <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Sobre
                         </a>
-                        <a href="{{ route('auth.login.create') }}"
+                        <a href="{{ route('login') }}"
                             class="mt-2 text-lg bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                             Acessar
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="{{ route('auth.register.create') }}"
+                        <a href="{{ route('register') }}"
                             class="mt-2 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                             <i class="fa-solid fa-plus"></i>
                             Criar uma Conta
@@ -210,14 +221,14 @@
             </nav>
             <div class="hidden md:flex items-center space-x-3">
                 <div>
-                    <a href="{{ route('auth.register.create') }}"
+                    <a href="{{ route('register') }}"
                         class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         <i class="fa-solid fa-plus"></i>
                         Criar Conta
                     </a>
                 </div>
                 <div>
-                    <a href="{{ route('auth.login.create') }}"
+                    <a href="{{ route('login') }}"
                         class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
                         Acessar
                         <i class="fa-solid fa-arrow-right"></i>

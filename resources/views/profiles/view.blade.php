@@ -8,10 +8,29 @@
                 <div class="flex flex-col justify-center">
                     <div class="flex justify-between">
                         @if ($user->id_user !== auth()->id())
-                            <a href=""
-                                class="bg-linear-to-tr shadow-lg from-lime-500 to-lime-300 hover:shadow-lg hover:shadow-lime-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full">
-                                <i class="fa-solid fa-plus px-px"></i>
-                            </a>
+                            @if ($friendRelation === 'pending')
+                                <div
+                                    class="bg-linear-to-tr shadow-lg from-cyan-500 to-cyan-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                            @elseif($friendRelation === 'accepted')
+                                <form action="{{ route('friends.destroy', $user->username) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="bg-linear-to-tr shadow-lg from-red-600 to-red-400 hover:shadow-lg hover:shadow-red-500/50 hover:cursor-pointer duration-300 ease-in-out text-white p-2 text-2xl rounded-full">
+                                        <i class="fa-solid fa-user-xmark px-px"></i>
+                                    </button>
+                                </form>
+                            @else
+                                <form action="{{ route('friends.request', $user->username) }}" method="POST">
+                                    @csrf
+                                    <button type="submit"
+                                        class="bg-linear-to-tr shadow-lg from-lime-500 to-lime-300 hover:shadow-lg hover:shadow-lime-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full">
+                                        <i class="fa-solid fa-plus px-px"></i>
+                                    </button>
+                                </form>
+                            @endif
                         @else
                             <a href="{{ route('users.profile') }}"
                                 class="bg-linear-to-tr shadow-lg from-cyan-500 to-cyan-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full">

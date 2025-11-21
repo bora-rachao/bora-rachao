@@ -49,10 +49,13 @@ class ProfileController extends Controller
             ->take(4)
             ->get();
 
+        $friendRelation = Auth::user()?->friendshipWith($user)?->status;
+
         return view('profiles.view', compact(
             'user',
             'adminEvents',
-            'randomFriends'
+            'randomFriends',
+            'friendRelation',
         ));
     }
 }

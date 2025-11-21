@@ -3,37 +3,38 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\FriendController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('auth')
-    ->name('auth.')
     ->group(function () {
-        Route::name('register.')
+        Route::name('register')
             ->prefix('register')
             ->middleware('guest')
             ->controller(RegisterController::class)
             ->group(function () {
-                Route::get('/', 'create')->name('create');
-                Route::post('/', 'store')->name('store');
+                Route::get('/', 'create');
+                Route::post('/', 'store');
             });
-        Route::name('login.')
+        Route::name('login')
             ->prefix('login')
             ->middleware('guest')
             ->controller(LoginController::class)
             ->group(function () {
-                Route::get('/', 'create')->name('create');
-                Route::post('/', 'store')->name('store');
+                Route::get('/', 'create');
+                Route::post('/', 'store');
             });
-        Route::post('/logout', [LoginController::class, 'destroy'])
-            ->name('logout')
-            ->middleware('auth');
+        Route::name('logout')
+            ->middleware('auth')
+            ->post('/logout', [LoginController::class, 'destroy']);
     });
 
 Route::prefix('events')
@@ -78,4 +79,25 @@ Route::prefix('users')
         Route::put('/personal', 'personalUpdate')->name('personal.update');
         Route::get('/password', 'password')->name('password');
         Route::put('/password', 'passwordUpdate')->name('password.update');
+    });
+
+Route::prefix('friends')
+    ->name('friends.')
+    ->middleware('auth')
+    ->controller(FriendController::class)
+    ->group(function () {
+
+        Route::get('/receiveds', 'receiveds')->name('receiveds');
+        Route::post('/request/{user:username}', 'request')->name('request');
+        Route::delete('/destroy/{user:username}', 'destroy')->name('destroy');
+        Route::post('/accept/{friend}', 'accept')->name('accept');
+        Route::post('/reject/{friend}', 'reject')->name('reject');
+    });
+
+Route::prefix('notifications')
+    ->name('notifications.')
+    ->controller(NotificationController::class)
+    ->middleware('auth')
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
     });

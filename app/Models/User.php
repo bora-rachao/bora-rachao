@@ -60,10 +60,23 @@ class User extends Authenticatable
         ];
     }
 
-    public function friends(): HasMany
+    public function friends()
     {
         return $this->hasMany(Friend::class, 'user_id')
-            ->orWhere('friend_id', $this->id);
+            ->where(function ($q) {
+                $q->where('user_id', $this->id)
+                    ->orWhere('friend_id', $this->id);
+            });
+    }
+
+    public function sentFriendRequests(): HasMany
+    {
+        return $this->hasMany(Friend::class, 'user_id');
+    }
+
+    public function receivedFriendRequests(): HasMany
+    {
+        return $this->hasMany(Friend::class, 'friend_id');
     }
 
     public function adminEvents(): HasMany
@@ -74,5 +87,18 @@ class User extends Authenticatable
     public function joinedEvents(): BelongsToMany
     {
         return $this->belongsToMany(Event::class, 'event_players', 'user_id', 'event_id');
+    }
+
+    public function friendshipWith(User $otherUser)
+    {
+        return Friend::where(function ($q) use ($otherUser) {
+            $q->where('user_id', $this->id_user)
+                ->where('friend_id', $otherUser->id_user);
+            })
+            ->orWhere(function ($q) use ($otherUser) {
+                $q->where('user_id', $otherUser->id_user)
+                    ->where('friend_id', $this->id_user);
+            })
+            ->first();
     }
 }
