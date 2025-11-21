@@ -4,7 +4,7 @@
     <form action="{{ route('users.password.update') }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-6 gap-x-6">
+        <div class="grid sm:grid-cols-2 gap-y-6 gap-x-6">
             <div class="flex flex-col gap-2">
                 <label class="text-gray-700 text-md" for="password">
                     <i class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"></i>

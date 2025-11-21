@@ -27,6 +27,8 @@
     @if (session('error'))
         <x-general.toast type="error" :message="session('error')" />
     @endif
+
+    @yield('js')
 </body>
 
 </html>

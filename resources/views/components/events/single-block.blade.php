@@ -7,14 +7,9 @@
             {{ $event->sport->name }}
         </span>
         <div class="flex items-center justify-start space-x-1 mt-1">
-            @if ($event->user->avatar)
-                <img src="{{ $event->user->avatar }}" class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover "
-                    alt="{{ $event->user->username }}" />
-            @else
-                <img src="{{ asset('assets/images/default/user.jpg') }}"
-                    class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover "
-                    alt="{{ $event->user->username }}" />
-            @endif
+            <img src="{{ $event->user->avatar ? asset('storage/assets/images/users/' . $event->user->avatar) : asset('assets/images/default/user.jpg') }}"
+                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover "
+                alt="{{ $event->user->username }}" />
             <p class="font-bold text-cyan-500">{{ $event->user->username }}</p>
         </div>
         <hr class="text-gray-300 my-1" />

@@ -95,15 +95,9 @@
             </nav>
             <div class="flex items-center space-x-3">
                 <a href="{{ route('profiles.view', auth()->user()->username) }}">
-                    @if (auth()->user()->avatar)
-                        <img src="{{ asset('storage/avatars' . auth()->user()->avatar) }}"
-                            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-                            alt="Profile Photo" />
-                    @else
-                        <img src="{{ asset('assets/images/default/user.jpg') }}"
-                            class="w-9 h-9 rounded-full border-3 border-gray-400 hover:border-cyan-500 duration-300 ease-in-out"
-                            alt="Profile Photo" />
-                    @endif
+                    <img src="{{ auth()->user()?->avatar ? asset('storage/assets/images/users/' . auth()->user()->avatar) : asset('assets/images/default/user.jpg') }}"
+                        class="size-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+                        alt="Profile Photo" />
                 </a>
                 <div class="hidden md:flex items-center space-x-3">
                     <a href="{{ route('events.index') }}"

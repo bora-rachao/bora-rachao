@@ -10,4 +10,4 @@
         </main>
     </div>
     @include('partials.footer')
-@endSection
+@endsection
