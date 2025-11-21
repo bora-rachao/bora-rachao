@@ -13,8 +13,6 @@ class ProfileController extends Controller
     {
         $loggedUserId = Auth::id();
 
-        $friendsCount = $user->friends()->where('status', 'completed')->count();
-
         $adminEvents = $user
             ->adminEvents()
             ->with(['sport', 'address', 'user'])
@@ -53,7 +51,6 @@ class ProfileController extends Controller
 
         return view('profiles.view', compact(
             'user',
-            'friendsCount',
             'adminEvents',
             'randomFriends'
         ));

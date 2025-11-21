@@ -18,16 +18,18 @@ Route::prefix('auth')
         Route::name('register.')
             ->prefix('register')
             ->middleware('guest')
+            ->controller(RegisterController::class)
             ->group(function () {
-                Route::get('/', [RegisterController::class, 'create'])->name('create');
-                Route::post('/', [RegisterController::class, 'store'])->name('store');
+                Route::get('/', 'create')->name('create');
+                Route::post('/', 'store')->name('store');
             });
         Route::name('login.')
             ->prefix('login')
             ->middleware('guest')
+            ->controller(LoginController::class)
             ->group(function () {
-                Route::get('/', [LoginController::class, 'create'])->name('create');
-                Route::post('/', [LoginController::class, 'store'])->name('store');
+                Route::get('/', 'create')->name('create');
+                Route::post('/', 'store')->name('store');
             });
         Route::post('/logout', [LoginController::class, 'destroy'])
             ->name('logout')
@@ -69,7 +71,11 @@ Route::prefix('users')
     ->controller(UserController::class)
     ->group(function () {
         Route::get('/profile', 'profile')->name('profile');
+        Route::put('/profile', 'profileUpdate')->name('profile.update');
         Route::get('/avatar', 'avatar')->name('avatar');
+        Route::put('/avatar', 'avatarUpdate')->name('avatar.update');
         Route::get('/personal', 'personal')->name('personal');
+        Route::put('/personal', 'personalUpdate')->name('personal.update');
         Route::get('/password', 'password')->name('password');
+        Route::put('/password', 'passwordUpdate')->name('password.update');
     });

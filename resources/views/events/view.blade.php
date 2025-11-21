@@ -16,16 +16,10 @@
             <div
                 class="flex flex-col lg:flex-row basis-full justify-between my-6 mx-7 pb-5 text-gray-700 border-b border-b-gray-300">
                 <div class="flex flex-col sm:flex-row gap-4 items-center">
-                    <a href="{{ route('home') }}">
-                        @if (auth()->user()?->avatar)
-                            <img src="{{ auth()->user()->avatar }}"
-                                class="w-16 h-16 object-cover rounded-full border-2 border-cyan-500 duration-300 ease-in-out"
-                                alt="profile image" />
-                        @else
-                            <img src="{{ asset('assets/images/default/user.jpg') }}"
-                                class="w-16 h-16 object-cover rounded-full border-2 border-cyan-500 duration-300 ease-in-out"
-                                alt="profile image" />
-                        @endif
+                    <a href="{{ route('profiles.view', $event->user->username) }}">
+                        <img src="{{ $event->user->avatar ? asset('storage/assets/images/users/' . $event->user->avatar) : asset('assets/images/default/user.jpg') }}"
+                            class="size-20 object-cover rounded-full border-2 border-cyan-500 duration-300 ease-in-out"
+                            alt="profile image" />
                     </a>
                     <p class="text-2xl font-semibold text-cyan-500">{{ '@' . $event->user->username }}</p>
                     <p class="text-2xl font-semibold text-white bg-lime-500 rounded-lg px-2">
@@ -183,7 +177,8 @@
                         <div class="flex text-2xl text-gray-700 pb-5 font-bold">
                             <p>Participantes:</p>
                             <p class="text-orange-500">
-                                <i class="fa-solid fa-users ml-5"></i>{{ $event->players_count }}/{{ $event->max_players }}
+                                <i
+                                    class="fa-solid fa-users ml-5"></i>{{ $event->players_count }}/{{ $event->max_players }}
                             </p>
                         </div>
 

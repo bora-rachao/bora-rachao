@@ -19,15 +19,9 @@
                             </a>
                         @endif
                     </div>
-                    @if ($user->avatar)
-                        <img src="{{ asset('assets/images/' . $user->avatar) }}"
-                            class="w-full max-w-[250px] h-full rounded-full object-cover border-4 border-gray-300 shadow-lg"
-                            alt="{{ $user->username }}" />
-                    @else
-                        <img src="{{ asset('assets/images/default/user.jpg') }}"
-                            class="w-full max-w-[250px] h-full rounded-full object-cover border-4 border-gray-300 shadow-lg"
-                            alt="{{ $user->username }}" />
-                    @endif
+                    <img src="{{ $user->avatar ? asset('storage/assets/images/users/' . $user->avatar) : asset('assets/images/default/user.jpg') }}"
+                        class="size-[250px] min-w-[250px] min-h-[250px] rounded-full object-cover border-4 border-gray-300 shadow-lg"
+                        alt="{{ $user->username }}" />
                 </div>
                 <div>
                     <h2 class="text-center text-3xl text-cyan-500 font-semibold mb-0.5">
@@ -37,7 +31,7 @@
                         <a href="/app/Views/user/friends.html"
                             class="text-gray-500 text-sm hover:text-orange-500 duration-300 ease-in-out">
                             <i class="fa-solid fa-users text-xs"></i>
-                            {{ (string) $friendsCount }} amigo(s)
+                            {{ $user->friends_count }} amigo(s)
                         </a>
                     </div>
                     <div>

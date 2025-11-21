@@ -126,7 +126,7 @@
                                 </legend>
 
                                 <div class="flex flex-col lg:grid lg:grid-cols-6 gap-3">
-                                    <!-- CEP -->
+                                    
                                     <div class="flex flex-col gap-1.5 col-span-2">
                                         <label class="text-gray-700 text-md" for="zip_code">
                                             <i
@@ -138,7 +138,6 @@
                                         <x-forms.error name="zip_code" />
                                     </div>
 
-                                    <!-- Número -->
                                     <div class="flex flex-col gap-1.5 col-span-2">
                                         <label class="text-gray-700 text-md" for="house_number">
                                             <i
@@ -149,8 +148,7 @@
                                             class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full" />
                                         <x-forms.error name="house_number" />
                                     </div>
-
-                                    <!-- Cidade -->
+=
                                     <div class="flex flex-col gap-1.5 col-span-2">
                                         <label class="text-gray-700 text-md" for="city">
                                             <i
@@ -173,7 +171,6 @@
                                         </p>
                                     </div>
 
-                                    <!-- Rua -->
                                     <div class="flex flex-col gap-1.5 col-span-3">
                                         <label class="text-gray-700 text-md" for="street">
                                             <i
@@ -187,7 +184,6 @@
                                         </p>
                                     </div>
 
-                                    <!-- Bairro -->
                                     <div class="flex flex-col gap-1.5 col-span-3">
                                         <label class="text-gray-700 text-md" for="neighborhood">
                                             <i
@@ -207,7 +203,6 @@
                 </div>
 
                 <div class="col-span-2 lg:col-span-1 w-full flex flex-col">
-                    <!-- Amigos -->
                     <div
                         class="mx-4 lg:mx-6 mb-6 p-5 rounded-2xl shadow-lg border border-gray-300 border-t-6 border-t-lime-500 h-auto">
                         <p class="text-2xl text-gray-700 pb-5 font-bold">
