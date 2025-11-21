@@ -310,7 +310,7 @@ php artisan migrate
 
 7. Compilar assets do front-end
 ```
-npm run build
+npm run dev
 ```
 
 8. Iniciar o servidor:
