@@ -48,7 +48,7 @@
                             <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Sobre
                         </a>
-                        <a href="/app/Views/match/matches.html"
+                        <a href="{{ route('events.index') }}"
                             class="mt-2 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                             Bora Jogar!
                         </a>
@@ -80,31 +80,27 @@
                     class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Contato
                 </a>
-                <a href="/app/Views/match/matches.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('events.index') }}"
+                    class="{{ request()->routeIs('events.index') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Partidas
                 </a>
                 <a href="{{ route('sports') }}"
                     class="{{ request()->routeIs('sports') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Esportes
                 </a>
-                <a href="{{ route('general.about') }}" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('general.about') }}"
+                    class="{{ request()->routeIs('general.about') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Sobre
                 </a>
             </nav>
             <div class="flex items-center space-x-3">
-                <a href="/app/Views/user/profile.html">
-                    @if (auth()->user()->avatar)
-                        <img src="{{ asset('storage/avatars' . auth()->user()->avatar) }}"
-                            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-                            alt="Profile Photo" />
-                    @else
-                        <img src="{{ asset('assets/images/default/user.jpg') }}"
-                            class="w-9 h-9 rounded-full border-3 border-gray-400 hover:border-cyan-500 duration-300 ease-in-out"
-                            alt="Profile Photo" />
-                    @endif
+                <a href="{{ route('profiles.view', auth()->user()->username) }}">
+                    <img src="{{ auth()->user()?->avatar ? asset('storage/assets/images/users/' . auth()->user()->avatar) : asset('assets/images/default/user.jpg') }}"
+                        class="size-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+                        alt="Profile Photo" />
                 </a>
                 <div class="hidden md:flex items-center space-x-3">
-                    <x-general.button title='Bora jogar!' href='/app/Views/match/matches.html'
+                    <x-general.button title='Bora jogar!' href='{{ route('events.index') }}'
                         color='bg-cyan-500 hover:bg-cyan-400 hover:shadow-cyan-400/35' />
                     <div>
                         <form action="{{ route('auth.logout') }}" method="POST">
@@ -151,8 +147,8 @@
                             <i class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Contato
                         </a>
-                        <a href="/app/Views/match/matches.html"
-                            class="{{ request()->routeIs('') ? 'text-gray-700 font-bold' : 'text-gray-700' }}
+                        <a href="{{ route('events.index') }}"
+                            class="{{ request()->routeIs('events.index') ? 'text-gray-700 font-bold' : 'text-gray-700' }}
                                 text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
                             <i class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
                             Partidas
@@ -198,8 +194,8 @@
                     class="{{ request()->routeIs('general.contact') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Contato
                 </a>
-                <a href="/app/Views/match/matches.html"
-                    class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+                <a href="{{ route('events.index') }}"
+                    class="{{ request()->routeIs('events.index') ? 'text-cyan-500 font-bold hover:text-cyan-600' : 'text-gray-800' }} hover:text-cyan-500 duration-300 ease-in-out">
                     Partidas
                 </a>
                 <a href="{{ route('sports') }}"

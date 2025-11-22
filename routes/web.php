@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -15,29 +18,64 @@ Route::prefix('auth')
         Route::name('register.')
             ->prefix('register')
             ->middleware('guest')
+            ->controller(RegisterController::class)
             ->group(function () {
-                Route::get('/', [RegisterController::class, 'create'])->name('create');
-                Route::post('/', [RegisterController::class, 'store'])->name('store');
+                Route::get('/', 'create')->name('create');
+                Route::post('/', 'store')->name('store');
             });
         Route::name('login.')
             ->prefix('login')
             ->middleware('guest')
+            ->controller(LoginController::class)
             ->group(function () {
-                Route::get('/', [LoginController::class, 'create'])->name('create');
-                Route::post('/', [LoginController::class, 'store'])->name('store');
+                Route::get('/', 'create')->name('create');
+                Route::post('/', 'store')->name('store');
             });
         Route::post('/logout', [LoginController::class, 'destroy'])
             ->name('logout')
             ->middleware('auth');
     });
 
+Route::prefix('events')
+    ->name('events.')
+    ->controller(EventController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/create', 'store')->name('store');
+        Route::get('/{event}', 'view')->name('view');
+    });
+
 Route::get('/sports', [SportController::class, 'index'])->name('sports');
 
 Route::prefix('general')
     ->name('general.')
+    ->controller(GeneralController::class)
     ->group(function () {
-        Route::get('/about', [GeneralController::class, 'about'])->name('about');
-        Route::get('/contact', [GeneralController::class, 'contact'])->name('contact');
-        Route::get('/privacy-policy', [GeneralController::class, 'privacyPolicy'])->name('privacy-policy');
-        Route::get('/terms-of-use', [GeneralController::class, 'termsOfUse'])->name('terms-of-use');
+        Route::get('/about', 'about')->name('about');
+        Route::get('/contact', 'contact')->name('contact');
+        Route::get('/privacy-policy', 'privacyPolicy')->name('privacy-policy');
+        Route::get('/terms-of-use', 'termsOfUse')->name('terms-of-use');
+    });
+
+Route::prefix('profiles')
+    ->name('profiles.')
+    ->controller(ProfileController::class)
+    ->group(function () {
+        Route::get('/{user:username}', 'view')->name('view');
+    });
+
+Route::prefix('users')
+    ->name('users.')
+    ->middleware('auth')
+    ->controller(UserController::class)
+    ->group(function () {
+        Route::get('/profile', 'profile')->name('profile');
+        Route::put('/profile', 'profileUpdate')->name('profile.update');
+        Route::get('/avatar', 'avatar')->name('avatar');
+        Route::put('/avatar', 'avatarUpdate')->name('avatar.update');
+        Route::get('/personal', 'personal')->name('personal');
+        Route::put('/personal', 'personalUpdate')->name('personal.update');
+        Route::get('/password', 'password')->name('password');
+        Route::put('/password', 'passwordUpdate')->name('password.update');
     });

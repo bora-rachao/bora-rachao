@@ -76,7 +76,8 @@ As tecnologias utilizadas até o momento incluem HTML, CSS, JavaScript e Tailwin
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" align="center" width="35"></a> &nbsp;&nbsp;
   <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Visual Studio Code" align="center" width="35"></a> &nbsp;&nbsp;
-  <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" align="center" width="35"></a>
+  <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" align="center" width="35"></a> &nbsp;&nbsp;
+  <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg" alt="Composer" align="center" width="35"></a> 
 </h3>
 
 Todo o trabalho está sendo conduzido nas dependências da Fatec de Jahu, local que oferece o suporte necessário para o desenvolvimento do projeto. As atividades estão sendo realizadas durante o primeiro semestre do curso, em alinhamento com os conteúdos estudados nas disciplinas, o que possibilita a aplicação prática dos conhecimentos adquiridos em sala de aula. 
@@ -272,8 +273,51 @@ graph TD
 [Voltar para o início](#inicio)
 
 # 7. Aplicação
-- ### Link para o nosso repositório do GitHub: [Repositório - BoraRachão](https://github.com/eullerlourenco/bora-rachao/)
-  
+## Passo a passo de como instalar a aplicação:
+
+1. **Clonar repositório** — baixar o projeto localmente:
+```
+git clone https://github.com/bora-rachao/bora-rachao
+```
+```
+cd bora-rachao
+```
+
+2. Instalar dependências PHP — instala packages do Composer:
+```
+composer install
+```
+
+3. Instalar dependências JS:
+```
+npm install
+```
+
+4. Criar arquivo de ambiente — copia o template:
+```
+cp .env.example .env
+```
+
+5. Gerar chave da aplicação — protege dados criptografados:
+```
+php artisan key:generate
+```
+
+6. Rodar as migrations:
+```
+php artisan migrate
+```
+
+7. Compilar assets do front-end
+```
+npm run dev
+```
+
+8. Iniciar o servidor:
+```bash
+php artisan serve
+```
+
 - ### Figura 4 - Página Home:
 <div align="center">
   <img alt="Figura 4 - Página Home" src=".github/home-aplicacao.jpeg" width="550">
@@ -426,5 +470,7 @@ MERMAID. Mermaid - Diagramming and charting tool. Disponível em: [https://www.m
 CANVA. Canva - Crie designs incríveis e gratuitos. Disponível em: [https://www.canva.com/](https://www.canva.com/). Acesso em: 6 out. 2025.
 
 DRAW.IO. draw.io - Security-first diagramming for teams. Disponível em: [https://www.drawio.com/](https://www.drawio.com/). Acesso em: 21 out. 2025.
+
+COMPOSER. Composer - Is a dependency manager for PHP. Disponível em: [https://getcomposer.org/](https://getcomposer.org/). Acesso em: 19 nov. 2025.
 
 [Voltar para o início](#inicio)

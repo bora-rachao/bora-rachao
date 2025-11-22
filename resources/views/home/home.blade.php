@@ -4,7 +4,7 @@
     <section class="container mx-auto px-4 my-8">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://clubepaineiras.org.br/wp-content/uploads/2022/05/jogadores.jpg" alt="futebol" />
@@ -18,7 +18,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://cdn.pixabay.com/photo/2020/11/27/18/59/tennis-5782695_1280.jpg" alt="tênis" />
@@ -31,7 +31,7 @@
                 </a>
 
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://webrun.com.br/wp-content/uploads/2021/04/AdobeStock_176854577.jpeg" alt="corrida" />
@@ -45,7 +45,7 @@
             </div>
 
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -58,7 +58,7 @@
             </a>
 
             <!-- card -->
-            <a href="/app/Views/match/matches.html"
+            <a href="{{ route('events.index') }}"
                 class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full">
                 <img class="absolute top-0 left-0 h-full w-full object-cover"
                     src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -73,7 +73,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://images.pexels.com/photos/22763693/pexels-photo-22763693/free-photo-of-woman-playing-tennis-on-beach.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -87,7 +87,7 @@
                 </a>
 
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://cdn.pixabay.com/photo/2016/06/10/03/06/sport-1447323_1280.jpg" alt="futevôlei" />
@@ -103,7 +103,7 @@
             <!-- double card -->
             <div class="grid grid-cols-1 gap-3">
                 <!-- card -->
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full">
                     <img class="absolute top-0 left-0 h-full w-full object-cover"
                         src="https://images.pexels.com/photos/163407/cyclists-trail-bike-clouds-163407.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -171,204 +171,21 @@
         <div class="my-6">
             <h2 class="text-3xl text-gray-700 font-semibold">
                 <i class="fa-solid fa-location-dot"></i>
-                Acontecendo agora em Jaú
+                Acontecendo agora em {{ ucfirst(auth()->user()->city ?? 'Jaú') }}
             </h2>
         </div>
         <div class="grid lg:grid-cols-4 gap-y-3 lg:gap-y-0 lg:gap-x-3">
-            <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            futebol</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/joaofran.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="joaofran" />
-                            <p class="font-bold text-cyan-500">joaocf</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>13:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>7/10
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            basquete</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/eullerls.jpeg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="eullerls" />
-                            <p class="font-bold text-cyan-500">eullerls</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>19:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>3/6
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            vôlei</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/lucasbardeli.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="lucasbardeli" />
-                            <p class="font-bold text-cyan-500">lucasbardeli</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>10:30
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>7/8
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora beach
-                            tennis</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/pietror45.jpeg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="pietror45" />
-                            <p class="font-bold text-cyan-500">pietror45</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>08:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>3/4
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            futebol</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/fabriciols.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="fabriciols" />
-                            <p class="font-bold text-cyan-500">fabriciols</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>20:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>8/10
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            skate</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/altairjuninho.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="altairjuninho" />
-                            <p class="font-bold text-cyan-500">altairjuninho</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>17:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>1/4
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            corrida</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/gabribeiro.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="gabribeiro" />
-                            <p class="font-bold text-cyan-500">gabribeiro</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>19:00
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>3/5
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- card de uma partida -->
-                <a href="/app/Views/match/match.html">
-                    <div
-                        class="bg-white text-gray-700 shadow-lg border border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
-                        <span class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2">bora
-                            sinuca</span>
-                        <div class="flex items-center justify-start space-x-1 mt-1">
-                            <img src="/resources/assets/images/diegosilva77.jpg"
-                                class="w-8 h-8 rounded-full border-2 border-gray-300 object-cover" alt="diegosilva77" />
-                            <p class="font-bold text-cyan-500">diegosilva77</p>
-                        </div>
-                        <hr class="text-gray-300 my-1" />
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <p class="text-gray-500 font-semibold">
-                                    <i class="fa-solid fa-clock me-0.5"></i>14:30
-                                </p>
-                                <p class="text-orange-500 font-bold">
-                                    <i class="fa-solid fa-users me-1"></i>2/4
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            @if (count($randomEvents) > 0)
+                <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
+                    @foreach ($randomEvents as $event)
+                        <x-events.single-block :event="$event" />
+                    @endforeach
+                </div>
+            @else
+                <div class="col-span-3 flex justify-center items-center">
+                    <p class="opacity-50">Nenhuma partida rolando no momento...</p>
+                </div>
+            @endif
 
             <div class="bg-white rounded-xl shadow-lg border border-gray-300 p-4 flex flex-col justify-between gap-4">
                 <div class="text-center">
@@ -381,7 +198,7 @@
                     Quer ver mais "Bora" de diversos esportes? Acesse pelo botão abaixo
                     e veja todas partidas que estão acontecendo na sua região!
                 </p>
-                <a href="/app/Views/match/matches.html"
+                <a href="{{ route('events.index') }}"
                     class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
                     Ver mais partidas...
                 </a>
